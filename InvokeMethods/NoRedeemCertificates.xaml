@@ -1,12 +1,13 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="NoRedeemCertificates" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TenderEntryCheck" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="ScenarioName" Type="InArgument(x:String)" />
+    <x:Property Name="DownpaymentCheck" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,2298.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,2298.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NoRedeemCertificates_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -199,10 +200,10 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Tender Screen will display" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Downpayment Screen will display" />
                       <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[TenderEntryCheck]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Boolean">[DownpaymentCheck]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Boolean">True</InArgument>
@@ -219,7 +220,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[TenderEntryCheck]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Boolean">[DownpaymentCheck]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Boolean">False</InArgument>

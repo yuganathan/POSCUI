@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Test-Suite name="UiPath Project - Test Automation" total="20" passed="19" failures="1" execution-date="06/12/2020 19:56:28" total-time="00:01:57">
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>06/12/2020 19:56:25</Started>
+    <Ended>06/12/2020 19:56:28</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>06/12/2020 19:56:31</Started>
+    <Ended>06/12/2020 19:56:34</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>06/12/2020 19:56:35</Started>
+    <Ended>06/12/2020 19:56:38</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>06/12/2020 19:56:38</Started>
+    <Ended>06/12/2020 19:56:42</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>06/12/2020 19:56:42</Started>
+    <Ended>06/12/2020 19:56:45</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Customer Screen display on choosing Sale</TestName>
+    <Started>06/12/2020 19:56:45</Started>
+    <Ended>06/12/2020 19:56:48</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify entry of Revolving Charge</TestName>
+    <Started>06/12/2020 19:56:48</Started>
+    <Ended>06/12/2020 19:56:53</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify entry of customer details</TestName>
+    <Started>06/12/2020 19:56:54</Started>
+    <Ended>06/12/2020 19:57:01</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify SKU details returned on Item Entry Screen</TestName>
+    <Started>06/12/2020 19:57:01</Started>
+    <Ended>06/12/2020 19:57:11</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify ESP question on entering no for diamond bond</TestName>
+    <Started>06/12/2020 19:57:11</Started>
+    <Ended>06/12/2020 19:57:14</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Repair question on entering no for ESP</TestName>
+    <Started>06/12/2020 19:57:14</Started>
+    <Ended>06/12/2020 19:57:17</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Completion of Sale on entering no for customer repair</TestName>
+    <Started>06/12/2020 19:57:17</Started>
+    <Ended>06/12/2020 19:57:21</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Verify Promotion Code screen on enetring no for St Jude Hospital donation</TestName>
+    <Started>06/12/2020 19:57:21</Started>
+    <Ended>06/12/2020 19:57:24</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check the Promo Card Completion</TestName>
+    <Started>06/12/2020 19:57:24</Started>
+    <Ended>06/12/2020 19:57:26</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check Tender entry screen</TestName>
+    <Started>06/12/2020 19:57:26</Started>
+    <Ended>06/12/2020 19:57:29</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check Tender Options</TestName>
+    <Started>06/12/2020 19:57:29</Started>
+    <Ended>06/12/2020 19:57:32</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check cash tender</TestName>
+    <Started>06/12/2020 19:57:32</Started>
+    <Ended>06/12/2020 19:57:35</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check Customer Desire for Gift Receipt question</TestName>
+    <Started>06/12/2020 19:57:35</Started>
+    <Ended>06/12/2020 19:57:37</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check email receipt question</TestName>
+    <Started>06/12/2020 19:57:37</Started>
+    <Ended>06/12/2020 19:57:40</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
+    <TestName>Check Gift card sale question</TestName>
+    <Started>06/12/2020 19:57:40</Started>
+    <Ended>06/12/2020 19:58:27</Ended>
+    <Status>FAILED</Status>
+  </Result>
+</Test-Suite>

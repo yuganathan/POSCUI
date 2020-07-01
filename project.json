@@ -43,6 +43,11 @@
         "testCaseId": "45d32dea-6ec4-4137-bb6a-eadef9747037",
         "dataVariationFilePath": ".variations\\POS-TestData - Copy_TestData.json",
         "fileName": "DataDrivenTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ea426be0-4097-4773-a179-5a60532b6308",
+        "fileName": "TestCase-Sale-with-ESP-Promocode.xaml"
       }
     ]
   },

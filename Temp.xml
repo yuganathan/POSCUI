@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Test-Suite>
-  <Result>
-    <TestScenario>Sale with Cash - Invalid SKU</TestScenario>
-    <TestName>Verify Application Menu</TestName>
-    <Started>06/12/2020 19:58:27</Started>
-    <Status>STARTED</Status>
-  </Result>
-</Test-Suite>

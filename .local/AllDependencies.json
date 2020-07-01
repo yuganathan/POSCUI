@@ -1936,15 +1936,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Csharmila\\.nuget\\packages\\": {}
+    "C:\\Users\\syuganathan\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "PoS Demo",
       "projectName": "PoS Demo",
-      "projectPath": "C:\\Users\\Csharmila\\Documents\\UiPath\\POS-TestAutomationProject\\.local",
-      "packagesPath": "C:\\Users\\Csharmila\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Csharmila\\Documents\\UiPath\\POS-TestAutomationProject\\.local"
+      "projectPath": "C:\\Users\\syuganathan\\Documents\\UiPath\\POSCUI\\.local",
+      "packagesPath": "C:\\Users\\syuganathan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\syuganathan\\Documents\\UiPath\\POSCUI\\.local"
     },
     "frameworks": {
       "net461": {

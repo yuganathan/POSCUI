@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Test-Suite name="UiPath Project - Test Automation" total="20" passed="19" failures="1" execution-date="06/12/2020 19:56:28" total-time="00:01:57">
+<Test-Suite name="UiPath Project - Test Automation" total="64" passed="63" failures="1" execution-date="06/12/2020 19:56:28" total-time="00:05:47">
   <Result>
     <TestScenario>Sale with Cash - Valid Test Data</TestScenario>
     <TestName>Verify Application Menu</TestName>
@@ -139,5 +139,313 @@
     <Started>06/12/2020 19:57:40</Started>
     <Ended>06/12/2020 19:58:27</Ended>
     <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 15:45:41</Started>
+    <Ended>07/01/2020 15:45:45</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 15:45:45</Started>
+    <Ended>07/01/2020 15:45:49</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 15:45:49</Started>
+    <Ended>07/01/2020 15:45:52</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 15:45:52</Started>
+    <Ended>07/01/2020 15:45:55</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 15:48:18</Started>
+    <Ended>07/01/2020 15:48:22</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 15:48:23</Started>
+    <Ended>07/01/2020 15:48:26</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 15:48:26</Started>
+    <Ended>07/01/2020 15:48:29</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 15:48:29</Started>
+    <Ended>07/01/2020 15:48:32</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 15:48:32</Started>
+    <Ended>07/01/2020 15:48:36</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 15:50:57</Started>
+    <Ended>07/01/2020 15:51:01</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 15:51:01</Started>
+    <Ended>07/01/2020 15:51:04</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 15:51:05</Started>
+    <Ended>07/01/2020 15:51:08</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 15:51:08</Started>
+    <Ended>07/01/2020 15:51:11</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 15:51:11</Started>
+    <Ended>07/01/2020 15:51:15</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 16:30:25</Started>
+    <Ended>07/01/2020 16:30:30</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 16:30:30</Started>
+    <Ended>07/01/2020 16:30:33</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 16:30:34</Started>
+    <Ended>07/01/2020 16:30:37</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 16:30:37</Started>
+    <Ended>07/01/2020 16:30:40</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 16:30:41</Started>
+    <Ended>07/01/2020 16:30:44</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Customer Screen display on choosing Sale</TestName>
+    <Started>07/01/2020 16:30:44</Started>
+    <Ended>07/01/2020 16:30:47</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify entry of Revolving Charge</TestName>
+    <Started>07/01/2020 16:30:48</Started>
+    <Ended>07/01/2020 16:31:01</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>01/01</TestScenario>
+    <TestName></TestName>
+    <Started>07/01/2020 16:31:02</Started>
+    <Ended>07/01/2020 16:31:34</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 16:36:46</Started>
+    <Ended>07/01/2020 16:36:50</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 16:36:51</Started>
+    <Ended>07/01/2020 16:36:54</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 16:36:54</Started>
+    <Ended>07/01/2020 16:36:57</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 16:37:45</Started>
+    <Ended>07/01/2020 16:37:49</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 16:37:50</Started>
+    <Ended>07/01/2020 16:37:53</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 16:37:53</Started>
+    <Ended>07/01/2020 16:37:56</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 16:37:57</Started>
+    <Ended>07/01/2020 16:38:08</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 16:38:09</Started>
+    <Ended>07/01/2020 16:38:12</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 16:39:10</Started>
+    <Ended>07/01/2020 16:39:14</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 16:39:15</Started>
+    <Ended>07/01/2020 16:39:18</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 16:39:18</Started>
+    <Ended>07/01/2020 16:39:22</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 16:39:22</Started>
+    <Ended>07/01/2020 16:39:25</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 16:39:25</Started>
+    <Ended>07/01/2020 16:39:29</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Customer Screen display on choosing Sale</TestName>
+    <Started>07/01/2020 16:39:29</Started>
+    <Ended>07/01/2020 16:39:32</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Sale with Cash - ESP and Promo Code</TestScenario>
+    <TestName>Verify Application Menu</TestName>
+    <Started>07/01/2020 16:40:22</Started>
+    <Ended>07/01/2020 16:40:27</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify POS Menu</TestName>
+    <Started>07/01/2020 16:40:27</Started>
+    <Ended>07/01/2020 16:40:30</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry screen on choosing Sales/Returns</TestName>
+    <Started>07/01/2020 16:40:30</Started>
+    <Ended>07/01/2020 16:40:34</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sales Person entry</TestName>
+    <Started>07/01/2020 16:40:34</Started>
+    <Ended>07/01/2020 16:40:37</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Sale option on entering Source code as LO</TestName>
+    <Started>07/01/2020 16:40:38</Started>
+    <Ended>07/01/2020 16:40:41</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify Customer Screen display on choosing Sale</TestName>
+    <Started>07/01/2020 16:40:41</Started>
+    <Ended>07/01/2020 16:40:44</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario></TestScenario>
+    <TestName>Verify entry of Revolving Charge</TestName>
+    <Started>07/01/2020 16:40:45</Started>
+    <Ended>07/01/2020 16:40:58</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>01/01</TestScenario>
+    <TestName></TestName>
+    <Started>07/01/2020 16:40:58</Started>
+    <Ended>07/01/2020 16:41:26</Ended>
+    <Status>PASSED</Status>
   </Result>
 </Test-Suite>

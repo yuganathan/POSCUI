@@ -36,7 +36,7 @@
       {
         "editingStatus": "InProgress",
         "testCaseId": "8da7813f-e90b-4759-8bdc-86be9cdd2e19",
-        "fileName": "TestCase.xaml"
+        "fileName": "Sprint3-TestFlow.xaml"
       },
       {
         "editingStatus": "InProgress",
@@ -47,7 +47,17 @@
       {
         "editingStatus": "InProgress",
         "testCaseId": "ea426be0-4097-4773-a179-5a60532b6308",
-        "fileName": "TestCase-Sale-with-ESP-Promocode.xaml"
+        "fileName": "TestCase-Sale.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f65d1ed4-0d52-4216-b981-87cf8f31272d",
+        "fileName": "TestCase-Return.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "17082f7f-60bd-432f-bc05-af6e65bb80b3",
+        "fileName": "TestCase-Exchange.xaml"
       }
     ]
   },

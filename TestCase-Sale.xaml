@@ -107,9 +107,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID58</x:Reference>
+        <x:Reference>__ReferenceID59</x:Reference>
       </Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID58">
+      <FlowStep x:Name="__ReferenceID59">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,143.6</av:Point>
@@ -593,7 +593,7 @@
                                                                                                                                             <av:PointCollection x:Key="ConnectorLocation">150,2326.4 150,2356.4 360,2356.4 360,2386.4</av:PointCollection>
                                                                                                                                           </scg:Dictionary>
                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Downpaymentflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods\EnterTenderRevoloving.xaml">
+                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Tender Revolving flow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods\EnterTenderRevoloving.xaml">
                                                                                                                                           <ui:InvokeWorkflowFile.Arguments>
                                                                                                                                             <OutArgument x:TypeArguments="x:Boolean" x:Key="TendersCheck">[TendersCheck]</OutArgument>
                                                                                                                                             <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
@@ -683,10 +683,10 @@
                                                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                     <av:Point x:Key="ShapeLocation">80,2603.6</av:Point>
                                                                                                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">180,2656.4 180,2730 460,2730</av:PointCollection>
+                                                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">180,2656.4 180,2686.4 330,2686.4 330,2768.8</av:PointCollection>
                                                                                                                                                                   </scg:Dictionary>
                                                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
+                                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
                                                                                                                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                                                                                                                     <OutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">[POSMenuCheck]</OutArgument>
                                                                                                                                                                     <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
@@ -698,18 +698,36 @@
                                                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                 </ui:InvokeWorkflowFile>
                                                                                                                                                                 <FlowStep.Next>
-                                                                                                                                                                  <FlowStep x:Name="__ReferenceID10">
+                                                                                                                                                                  <FlowStep x:Name="__ReferenceID58">
                                                                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                                        <av:Point x:Key="ShapeLocation">460,2703.6</av:Point>
-                                                                                                                                                                        <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                                                                                                                        <av:Point x:Key="ShapeLocation">215.2,2768.8</av:Point>
+                                                                                                                                                                        <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
+                                                                                                                                                                        <av:PointCollection x:Key="ConnectorLocation">444.8,2800 460,2800 460,2850 190,2850 190,2730 460,2730</av:PointCollection>
                                                                                                                                                                       </scg:Dictionary>
                                                                                                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoHome File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="GotoPOSHome.xaml">
-                                                                                                                                                                      <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                                                                                                                                                      </ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                                    </ui:InvokeWorkflowFile>
+                                                                                                                                                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_40" Text="[TestDataRow.Item(&quot;Scenario&quot;).ToString+&quot;Completed&quot;]">
+                                                                                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                                        </scg:Dictionary>
+                                                                                                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                    </WriteLine>
+                                                                                                                                                                    <FlowStep.Next>
+                                                                                                                                                                      <FlowStep x:Name="__ReferenceID10">
+                                                                                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                            <av:Point x:Key="ShapeLocation">460,2703.6</av:Point>
+                                                                                                                                                                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                                                                                                                          </scg:Dictionary>
+                                                                                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoHome File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="GotoPOSHome.xaml">
+                                                                                                                                                                          <ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                                                                                                                          </ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                        </ui:InvokeWorkflowFile>
+                                                                                                                                                                      </FlowStep>
+                                                                                                                                                                    </FlowStep.Next>
                                                                                                                                                                   </FlowStep>
                                                                                                                                                                 </FlowStep.Next>
                                                                                                                                                               </FlowStep>
@@ -1212,6 +1230,7 @@
         </FlowStep.Next>
       </FlowStep>
       <x:Reference>__ReferenceID57</x:Reference>
+      <x:Reference>__ReferenceID58</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>

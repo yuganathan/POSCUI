@@ -1,0 +1,298 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SaleSlipInquire" this:SaleSlipInquire.ScenarioName="Sale Slip Inquiries" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ScenarioName" Type="InArgument(x:String)" />
+    <x:Property Name="VerifyPOSSalesliplist" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>842.4,2608.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SaleSlipInquire_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SaleSlipInquire" sap:VirtualizedContainerService.HintSize="772,2444" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="count" />
+      <Variable x:TypeArguments="x:String" Name="listsale" />
+      <Variable x:TypeArguments="x:String" Name="total" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="730.4,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Sale Slip LIST" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="730.4,2226.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="693.6,1995.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Sale Slip" sap:VirtualizedContainerService.HintSize="652,1457.6" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="200c99b14b96a7abcdaa38fbaf70154e" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
+            <ui:WindowScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="533.6,1310.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Image" sap:VirtualizedContainerService.HintSize="492,1217.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="List of Inquire" sap:VirtualizedContainerService.HintSize="450.4,1124.8" sap2010:WorkflowViewState.IdRef="WindowScope_6" InformativeScreenshot="99d302d9cb1447487773a166a6013b02" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
+                      <ui:WindowScope.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416.8,977.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,472" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Total" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_19">
+                                <ui:GetOCRText.OCREngine>
+                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                    <ActivityFunc.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                    </ActivityFunc.Argument>
+                                    <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_19" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="3">
+                                      <ui:GoogleOCR.AllowedCharacters>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ui:GoogleOCR.AllowedCharacters>
+                                      <ui:GoogleOCR.DeniedCharacters>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ui:GoogleOCR.DeniedCharacters>
+                                    </ui:GoogleOCR>
+                                  </ActivityFunc>
+                                </ui:GetOCRText.OCREngine>
+                                <ui:GetOCRText.Target>
+                                  <ui:Target Element="{x:Null}" Id="c4460ba6-29ae-4155-893d-dc9e9dec050a" InformativeScreenshot="69b9e1c030625974c59b0ee32cd2eb63" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;" WaitForReady="COMPLETE">
+                                    <ui:Target.ClippingRegion>
+                                      <ui:Region Rectangle="808, 108, 71, 28" />
+                                    </ui:Target.ClippingRegion>
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                  </ui:Target>
+                                </ui:GetOCRText.Target>
+                                <ui:GetOCRText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
+                                </ui:GetOCRText.Text>
+                              </ui:GetOCRText>
+                              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Sale Slip" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_20">
+                                <ui:GetOCRText.OCREngine>
+                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                    <ActivityFunc.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                    </ActivityFunc.Argument>
+                                    <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_20" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="3">
+                                      <ui:GoogleOCR.AllowedCharacters>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ui:GoogleOCR.AllowedCharacters>
+                                      <ui:GoogleOCR.DeniedCharacters>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ui:GoogleOCR.DeniedCharacters>
+                                    </ui:GoogleOCR>
+                                  </ActivityFunc>
+                                </ui:GetOCRText.OCREngine>
+                                <ui:GetOCRText.Target>
+                                  <ui:Target Element="{x:Null}" Id="d462c209-0d6f-456b-aff2-23a1b5ed19ef" InformativeScreenshot="39e7d277fefc6a50f6c5f46ba9f5db4a" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;" WaitForReady="COMPLETE">
+                                    <ui:Target.ClippingRegion>
+                                      <ui:Region Rectangle="228, 62, 124, 32" />
+                                    </ui:Target.ClippingRegion>
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                  </ui:Target>
+                                </ui:GetOCRText.Target>
+                                <ui:GetOCRText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[listsale]</OutArgument>
+                                </ui:GetOCRText.Text>
+                              </ui:GetOCRText>
+                            </Sequence>
+                            <ui:SetClippingRegion Element="{x:Null}" Region="{x:Null}" Direction="RECTANGLE" DisplayName="Reset clipping region" sap:VirtualizedContainerService.HintSize="375.2,22.4" sap2010:WorkflowViewState.IdRef="SetClippingRegion_9">
+                              <ui:SetClippingRegion.Size>
+                                <ui:Region Rectangle="0, 0, 0, 0" />
+                              </ui:SetClippingRegion.Size>
+                            </ui:SetClippingRegion>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type " sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[String.Join(&quot;&quot;, Enumerable.Repeat(&quot;[k(down)]&quot;,100))]">
+                              <ui:TypeInto.Target>
+                                <ui:Target Element="{x:Null}" Id="690a4b66-9b86-49ec-bec1-f5d9cc01d48c" InformativeScreenshot="55ac35902ee5d231dfd61471a2525565" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
+                                  <ui:Target.ClippingRegion>
+                                    <ui:Region Rectangle="132, 102, 760, 208" />
+                                  </ui:Target.ClippingRegion>
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:TypeInto>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type " sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="%[k(enter)]">
+                              <ui:TypeInto.Target>
+                                <ui:Target Element="{x:Null}" Id="690a4b66-9b86-49ec-bec1-f5d9cc01d48c" InformativeScreenshot="55ac35902ee5d231dfd61471a2525565" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
+                                  <ui:Target.ClippingRegion>
+                                    <ui:Region Rectangle="132, 102, 760, 208" />
+                                  </ui:Target.ClippingRegion>
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:WindowScope.Body>
+                    </ui:WindowScope>
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </ui:WindowScope.Body>
+          </ui:WindowScope>
+          <If Condition="[total.Contains(&quot;Total&quot;) OR listsale.Contains(&quot;Slips&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,255.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[VerifyPOSSalesliplist]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Verified  POS Inquire List" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,215.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[VerifyPOSSalesliplist]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Throw Exception="[new Exception(&quot;Sale screen not viewed&quot;)]" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="696.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="EndTest_1" Orientation="Window" Status="FAILED" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="730.4,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Orientation="Window" Status="PASSED" />
+  </Sequence>
+</Activity>

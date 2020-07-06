@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>924.8,2998.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>949.6,3158.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TestCase_Sale_with_ESP_Promocode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,13 +61,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_Sale_with_ESP_Promocode" sap:VirtualizedContainerService.HintSize="935.2,2833.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_Sale_with_ESP_Promocode" sap:VirtualizedContainerService.HintSize="960,2993.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="893.6,2793.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="918.4,2900.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="TestDataTable" />
         <Variable x:TypeArguments="x:Boolean" Name="SalesReturnCheck" />
@@ -93,6 +93,7 @@
         <Variable x:TypeArguments="x:Boolean" Name="TendersCheck" />
         <Variable x:TypeArguments="x:Boolean" Name="GiftReceiptCheck" />
         <Variable x:TypeArguments="x:Boolean" Name="ReceiptEmailCheck" />
+        <Variable x:TypeArguments="x:String" Name="Revolvingvalue" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -100,15 +101,15 @@
           <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
           <av:Size x:Key="ShapeSize">60,75.2</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,143.6</av:PointCollection>
-          <x:Double x:Key="Width">860</x:Double>
-          <x:Double x:Key="Height">2756.4</x:Double>
+          <x:Double x:Key="Width">884.8</x:Double>
+          <x:Double x:Key="Height">2863.6</x:Double>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID55</x:Reference>
+        <x:Reference>__ReferenceID59</x:Reference>
       </Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID55">
+      <FlowStep x:Name="__ReferenceID59">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,143.6</av:Point>
@@ -118,13 +119,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Open CUI Workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InvokeMethods\OpenAppMenuCheck.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:Boolean" x:Key="AppMenuCheck">
-              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="AppMenuCheck" />
-            </OutArgument>
+            <OutArgument x:TypeArguments="x:Boolean" x:Key="AppMenuCheck">[AppMenuCheck]</OutArgument>
             <InOutArgument x:TypeArguments="x:String" x:Key="Logger" />
-            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -133,7 +130,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
         <FlowStep.Next>
-          <FlowDecision x:Name="__ReferenceID0" Condition="[AppMenuCheck]" DisplayName="AppMenuCheck" sap:VirtualizedContainerService.HintSize="88.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+          <FlowDecision x:Name="__ReferenceID1" Condition="[AppMenuCheck]" DisplayName="AppMenuCheck" sap:VirtualizedContainerService.HintSize="88.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -144,7 +141,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <FlowDecision.True>
-              <FlowStep x:Name="__ReferenceID1">
+              <FlowStep x:Name="__ReferenceID2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">0,273.6</av:Point>
@@ -154,16 +151,12 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Open POS Menu File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="InvokeMethods\OpenPOSMenu.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">
-                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="POSMenuCheck" />
-                    </InOutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">[POSMenuCheck]</InOutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <FlowStep.Next>
-                  <FlowDecision x:Name="__ReferenceID3" Condition="[POSMenuCheck]" DisplayName="POSMenuCheck" sap:VirtualizedContainerService.HintSize="88,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                  <FlowDecision x:Name="__ReferenceID4" Condition="[POSMenuCheck]" DisplayName="POSMenuCheck" sap:VirtualizedContainerService.HintSize="88,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +167,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <FlowDecision.True>
-                      <FlowStep x:Name="__ReferenceID4">
+                      <FlowStep x:Name="__ReferenceID5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">0,463.6</av:Point>
@@ -184,16 +177,12 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoSaleReturns File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="InvokeMethods\GotoSalesReturns.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="SalesPersonCheck">
-                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SalesPersonCheck" />
-                            </InOutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                            </InArgument>
+                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="SalesPersonCheck">[SalesPersonCheck]</InOutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <FlowStep.Next>
-                          <FlowDecision x:Name="__ReferenceID7" Condition="[SalesPersonCheck]" DisplayName="SalesPersonCheck" sap:VirtualizedContainerService.HintSize="98.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                          <FlowDecision x:Name="__ReferenceID8" Condition="[SalesPersonCheck]" DisplayName="SalesPersonCheck" sap:VirtualizedContainerService.HintSize="98.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -204,7 +193,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <FlowDecision.True>
-                              <FlowStep x:Name="__ReferenceID8">
+                              <FlowStep x:Name="__ReferenceID9">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">0,583.6</av:Point>
@@ -214,19 +203,13 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoSaleReturns File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="InvokeMethods\SalesPersonEntry.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="SrcCodeCheck">
-                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SrcCodeCheck" />
-                                    </OutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="SalesPerson">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;SalesPerson&quot;).ToString" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                    </InArgument>
+                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="SrcCodeCheck">[SrcCodeCheck]</OutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="SalesPerson">[TestDataRow.Item("SalesPerson").ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <FlowStep.Next>
-                                  <FlowDecision x:Name="__ReferenceID10" Condition="[SrcCodeCheck]" DisplayName="SrcCodeCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                  <FlowDecision x:Name="__ReferenceID11" Condition="[SrcCodeCheck]" DisplayName="SrcCodeCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -237,188 +220,167 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <FlowDecision.True>
-                                      <FlowStep x:Name="__ReferenceID12">
+                                      <FlowStep x:Name="__ReferenceID13">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">20,713.6</av:Point>
                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">120,766.4 120,796.4 430,796.4 430,826.4</av:PointCollection>
+                                            <av:PointCollection x:Key="ConnectorLocation">120,766.4 120,786.4 0,786.4 0,666.4 470,666.4 470,756.4</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Source Code File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="InvokeMethods\SourceCodeEntry.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
-                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="SaleCheck">
-                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SaleCheck" />
-                                            </OutArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                            </InArgument>
+                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="SaleCheck">[SaleCheck]</OutArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
                                         </ui:InvokeWorkflowFile>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID13" Condition="[SaleCheck]" DisplayName="SaleCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                          <FlowDecision x:Name="__ReferenceID14" Condition="[SaleCheck]" DisplayName="SaleCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <av:Point x:Key="ShapeLocation">394.8,826.4</av:Point>
+                                                <av:Point x:Key="ShapeLocation">434.8,756.4</av:Point>
                                                 <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
-                                                <av:PointCollection x:Key="TrueConnector">394.8,870 364.8,870 364.8,840 230,840</av:PointCollection>
-                                                <av:PointCollection x:Key="FalseConnector">465.2,870 535.2,870</av:PointCollection>
+                                                <av:PointCollection x:Key="TrueConnector">434.8,800 404.8,800 404.8,840 230,840</av:PointCollection>
+                                                <av:PointCollection x:Key="FalseConnector">505.2,800 535.2,800 535.2,840 625.2,840</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <FlowDecision.True>
-                                              <FlowStep x:Name="__ReferenceID14">
+                                              <FlowStep x:Name="__ReferenceID15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">30,813.6</av:Point>
                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                    <av:PointCollection x:Key="ConnectorLocation">130,866.4 130,896.4 344.4,896.4 344.4,926.4</av:PointCollection>
+                                                    <av:PointCollection x:Key="ConnectorLocation">130,866.4 130,896.4 260,896.4 260,846.4 490,846.4 490,876.4</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sale Page File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="InvokeMethods\ChooseSales.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingChargeCheck">
-                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="RevolvingChargeCheck" />
-                                                    </InOutArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                    </InArgument>
+                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingChargeCheck">[RevolvingChargeCheck]</InOutArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                 </ui:InvokeWorkflowFile>
                                                 <FlowStep.Next>
-                                                  <FlowDecision x:Name="__ReferenceID16" Condition="[RevolvingChargeCheck]" DisplayName="RevolvingCharge" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                                  <FlowDecision x:Name="__ReferenceID17" Condition="[RevolvingChargeCheck]" DisplayName="RevolvingCharge" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <av:Point x:Key="ShapeLocation">296.8,926.4</av:Point>
+                                                        <av:Point x:Key="ShapeLocation">442.4,876.4</av:Point>
                                                         <av:Size x:Key="ShapeSize">95.2,87.2</av:Size>
-                                                        <av:PointCollection x:Key="TrueConnector">296.8,970 266.8,970 266.8,930 240,930</av:PointCollection>
-                                                        <av:PointCollection x:Key="FalseConnector">392,970 422,970 422,990 495.2,990</av:PointCollection>
+                                                        <av:PointCollection x:Key="TrueConnector">442.4,920 330,920 330,940</av:PointCollection>
+                                                        <av:PointCollection x:Key="FalseConnector">537.6,920 567.6,920 567.6,940 635.2,940</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <FlowDecision.True>
-                                                      <FlowStep x:Name="__ReferenceID17">
+                                                      <FlowStep x:Name="__ReferenceID55">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <av:Point x:Key="ShapeLocation">40,903.6</av:Point>
-                                                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                            <av:PointCollection x:Key="ConnectorLocation">140,956.4 140,986.4 266.8,986.4 266.8,1016.4 332,1016.4 332,1046.4</av:PointCollection>
+                                                            <av:Point x:Key="ShapeLocation">198.8,940</av:Point>
+                                                            <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                                                            <av:PointCollection x:Key="ConnectorLocation">330,1000 330,1030 409.6,1030 409.6,1196.4 880.4,1196.4 880.4,896.4 550.4,896.4 550.4,986.4 480,986.4 480,1016.4</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Charge File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="InvokeMethods\RevolvingChargeEntry.xaml">
-                                                          <ui:InvokeWorkflowFile.Arguments>
-                                                            <InArgument x:TypeArguments="x:String" x:Key="RevCharge">
-                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;RevolvingCharge&quot;).ToString" />
-                                                            </InArgument>
-                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                            </InArgument>
-                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="SSNCheck">
-                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SSNCheck" />
-                                                            </OutArgument>
-                                                          </ui:InvokeWorkflowFile.Arguments>
-                                                        </ui:InvokeWorkflowFile>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:String">[Revolvingvalue]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:String">[TestDataRow.Item("RevolvingCharge").ToString]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
                                                         <FlowStep.Next>
-                                                          <FlowDecision x:Name="__ReferenceID18" Condition="[SSNCheck]" DisplayName="SSNCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                                          <FlowDecision x:Name="__ReferenceID56" Condition="[Revolvingvalue.Equals(&quot;Y&quot;)]" DisplayName="Revolving Y/N" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <av:Point x:Key="ShapeLocation">296.8,1046.4</av:Point>
-                                                                <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
-                                                                <av:PointCollection x:Key="TrueConnector">296.8,1090 266.8,1090 266.8,1020 240,1020</av:PointCollection>
-                                                                <av:PointCollection x:Key="FalseConnector">367.2,1090 397.2,1090 397.2,1080 465.2,1080</av:PointCollection>
+                                                                <av:Point x:Key="ShapeLocation">439.6,1016.4</av:Point>
+                                                                <av:Size x:Key="ShapeSize">80.8,87.2</av:Size>
+                                                                <av:PointCollection x:Key="TrueConnector">439.6,1060 -20,1060 -20,873.6 100,873.6 100,903.6</av:PointCollection>
+                                                                <av:PointCollection x:Key="FalseConnector">520.4,1060 640,1060 640,1053.6</av:PointCollection>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <FlowDecision.True>
-                                                              <FlowStep x:Name="__ReferenceID19">
+                                                              <FlowStep x:Name="__ReferenceID18">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <av:Point x:Key="ShapeLocation">40,993.6</av:Point>
+                                                                    <av:Point x:Key="ShapeLocation">0,903.6</av:Point>
                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                    <av:PointCollection x:Key="ConnectorLocation">140,1046.4 140,1076.4 326.4,1076.4 326.4,1156.4</av:PointCollection>
+                                                                    <av:PointCollection x:Key="ConnectorLocation">100,956.4 100,1066.4 330,1066.4 330,1096.4</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InvokeSSN File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="InvokeMethods\SSNEntry.xaml">
+                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Charge File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="InvokeMethods\RevolvingChargeEntry.xaml">
                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="SSNcardCheck">
-                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SSNcardCheck" />
-                                                                    </OutArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="SSNNo">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;SSN&quot;).ToString" />
-                                                                    </InArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="DateMonth">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;DOB&quot;).ToString" />
-                                                                    </InArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="ZipCode">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Zip&quot;).ToString" />
-                                                                    </InArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="RevCharge">[TestDataRow.Item("RevolvingCharge").ToString]</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="SSNCheck">[SSNCheck]</OutArgument>
                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                 </ui:InvokeWorkflowFile>
                                                                 <FlowStep.Next>
-                                                                  <FlowDecision x:Name="__ReferenceID22" Condition="[SSNCardCheck]" DisplayName="SSNCardCheck" sap:VirtualizedContainerService.HintSize="83.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
+                                                                  <FlowDecision x:Name="__ReferenceID19" Condition="[SSNCheck]" DisplayName="SSNCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                        <av:Point x:Key="ShapeLocation">284.8,1156.4</av:Point>
-                                                                        <av:Size x:Key="ShapeSize">83.2,87.2</av:Size>
-                                                                        <av:PointCollection x:Key="TrueConnector">284.8,1200 254.8,1200 254.8,1180 200,1180</av:PointCollection>
-                                                                        <av:PointCollection x:Key="FalseConnector">368,1200 398,1200 398,1230 455.2,1230</av:PointCollection>
+                                                                        <av:Point x:Key="ShapeLocation">294.8,1096.4</av:Point>
+                                                                        <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
+                                                                        <av:PointCollection x:Key="TrueConnector">294.8,1140 264.8,1140 264.8,1120 200,1120</av:PointCollection>
+                                                                        <av:PointCollection x:Key="FalseConnector">365.2,1140 395.2,1140 395.2,1150 575.2,1150</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <FlowDecision.True>
-                                                                      <FlowStep x:Name="__ReferenceID24">
+                                                                      <FlowStep x:Name="__ReferenceID20">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                            <av:Point x:Key="ShapeLocation">0,1153.6</av:Point>
+                                                                            <av:Point x:Key="ShapeLocation">0,1093.6</av:Point>
                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                            <av:PointCollection x:Key="ConnectorLocation">100,1206.4 100,1266.4 340,1266.4 340,1296.4</av:PointCollection>
+                                                                            <av:PointCollection x:Key="ConnectorLocation">100,1146.4 100,1216.4 360,1216.4 360,1246.4</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke EnterItemEntryScreen workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="InvokeMethods\EnterItemEntryScreen.xaml">
+                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InvokeSSN File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="InvokeMethods\SSNEntry.xaml">
                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="IssueDiamondBondCheck">
-                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="IssueDiamondBondCheck" />
-                                                                            </InOutArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="SKU">
-                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;SKU&quot;).ToString" />
+                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="SSNcardCheck">
+                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="SSNcardCheck" />
+                                                                            </OutArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="SSNNo">
+                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;SSN&quot;).ToString" />
+                                                                            </InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="DateMonth">
+                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;DOB&quot;).ToString" />
+                                                                            </InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="ZipCode">
+                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Zip&quot;).ToString" />
                                                                             </InArgument>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
                                                                               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
                                                                             </InArgument>
                                                                           </ui:InvokeWorkflowFile.Arguments>
-                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            </scg:Dictionary>
-                                                                          </sap:WorkflowViewStateService.ViewState>
                                                                         </ui:InvokeWorkflowFile>
                                                                         <FlowStep.Next>
-                                                                          <FlowDecision x:Name="__ReferenceID26" Condition="[IssueDiamondBondCheck]" DisplayName="IssueDiamondBondCheck" sap:VirtualizedContainerService.HintSize="140,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                                                          <FlowDecision x:Name="__ReferenceID0" Condition="[SSNCardCheck]" DisplayName="SSNCardCheck" sap:VirtualizedContainerService.HintSize="83.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                <av:Point x:Key="ShapeLocation">270,1296.4</av:Point>
-                                                                                <av:Size x:Key="ShapeSize">140,87.2</av:Size>
-                                                                                <av:PointCollection x:Key="TrueConnector">270,1340 100,1340 100,1393.6</av:PointCollection>
-                                                                                <av:PointCollection x:Key="FalseConnector">410,1340 440,1340 440,1430 505.2,1430</av:PointCollection>
+                                                                                <av:Point x:Key="ShapeLocation">318.4,1246.4</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">83.2,87.2</av:Size>
+                                                                                <av:PointCollection x:Key="TrueConnector">318.4,1290 288.4,1290 288.4,1310 200,1310</av:PointCollection>
+                                                                                <av:PointCollection x:Key="FalseConnector">401.6,1290 431.6,1290 431.6,1240 575.2,1240</av:PointCollection>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <FlowDecision.True>
-                                                                              <FlowStep x:Name="__ReferenceID25">
+                                                                              <FlowStep x:Name="__ReferenceID24">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <av:Point x:Key="ShapeLocation">0,1393.6</av:Point>
+                                                                                    <av:Point x:Key="ShapeLocation">0,1283.6</av:Point>
                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                    <av:PointCollection x:Key="ConnectorLocation">100,1446.4 100,1476.4 360,1476.4 360,1496.4</av:PointCollection>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">100,1336.4 100,1366.4 0,1366.4 0,1186.4 411.6,1186.4 411.6,1326.4 360,1326.4 360,1356.4</av:PointCollection>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoDiamondBond workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="InvokeMethods\NoDiamondBond.xaml">
+                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke EnterItemEntryScreen workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="InvokeMethods\EnterItemEntryScreen.xaml">
                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="ESPCheck">
-                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ESPCheck" />
+                                                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="IssueDiamondBondCheck">
+                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="IssueDiamondBondCheck" />
                                                                                     </InOutArgument>
-                                                                                    <InArgument x:TypeArguments="x:String" x:Key="DiamondBond">
-                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;DiamondBond&quot;).ToString" />
+                                                                                    <InArgument x:TypeArguments="x:String" x:Key="SKU">
+                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;SKU&quot;).ToString" />
                                                                                     </InArgument>
                                                                                     <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
                                                                                       <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
@@ -431,32 +393,32 @@
                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                 </ui:InvokeWorkflowFile>
                                                                                 <FlowStep.Next>
-                                                                                  <FlowDecision x:Name="__ReferenceID30" Condition="[ESPCheck]" DisplayName="ESPCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                                                                                  <FlowDecision x:Name="__ReferenceID26" Condition="[IssueDiamondBondCheck]" DisplayName="IssueDiamondBondCheck" sap:VirtualizedContainerService.HintSize="140,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                        <av:Point x:Key="ShapeLocation">324.8,1496.4</av:Point>
-                                                                                        <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
-                                                                                        <av:PointCollection x:Key="TrueConnector">324.8,1540 100,1540 100,1583.6</av:PointCollection>
-                                                                                        <av:PointCollection x:Key="FalseConnector">395.2,1540 425.2,1540 425.2,1520 485.2,1520</av:PointCollection>
+                                                                                        <av:Point x:Key="ShapeLocation">290,1356.4</av:Point>
+                                                                                        <av:Size x:Key="ShapeSize">140,87.2</av:Size>
+                                                                                        <av:PointCollection x:Key="TrueConnector">290,1400 260,1400 260,1363.6 100,1363.6 100,1393.6</av:PointCollection>
+                                                                                        <av:PointCollection x:Key="FalseConnector">430,1400 460,1400 460,1430 505.2,1430</av:PointCollection>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                     <FlowDecision.True>
-                                                                                      <FlowStep x:Name="__ReferenceID27">
+                                                                                      <FlowStep x:Name="__ReferenceID25">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                            <av:Point x:Key="ShapeLocation">0,1583.6</av:Point>
+                                                                                            <av:Point x:Key="ShapeLocation">0,1393.6</av:Point>
                                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                            <av:PointCollection x:Key="ConnectorLocation">100,1636.4 100,1666.4 273.2,1666.4 273.2,1606.4 350,1606.4 350,1626.4</av:PointCollection>
+                                                                                            <av:PointCollection x:Key="ConnectorLocation">100,1446.4 100,1476.4 350,1476.4 350,1546.4</av:PointCollection>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoESP workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="InvokeMethods\NoESP.xaml">
+                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoDiamondBond workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="InvokeMethods\NoDiamondBond.xaml">
                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="CustRepairCheck">
-                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="CustRepairCheck" />
+                                                                                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="ESPCheck">
+                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ESPCheck" />
                                                                                             </InOutArgument>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ESPValue">
-                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;ESP&quot;).ToString" />
+                                                                                            <InArgument x:TypeArguments="x:String" x:Key="DiamondBond">
+                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;DiamondBond&quot;).ToString" />
                                                                                             </InArgument>
                                                                                             <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
                                                                                               <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
@@ -469,36 +431,30 @@
                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                         </ui:InvokeWorkflowFile>
                                                                                         <FlowStep.Next>
-                                                                                          <FlowDecision x:Name="__ReferenceID32" Condition="[CustRepairCheck]" DisplayName="CustRepairCheck" sap:VirtualizedContainerService.HintSize="93.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
+                                                                                          <FlowDecision x:Name="__ReferenceID30" Condition="[ESPCheck]" DisplayName="ESPCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                <av:Point x:Key="ShapeLocation">303.2,1626.4</av:Point>
-                                                                                                <av:Size x:Key="ShapeSize">93.6,87.2</av:Size>
-                                                                                                <av:PointCollection x:Key="TrueConnector">303.2,1670 100,1670 100,1723.6</av:PointCollection>
-                                                                                                <av:PointCollection x:Key="FalseConnector">396.8,1670 426.8,1670 426.8,1770 475.2,1770</av:PointCollection>
+                                                                                                <av:Point x:Key="ShapeLocation">314.8,1546.4</av:Point>
+                                                                                                <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
+                                                                                                <av:PointCollection x:Key="TrueConnector">314.8,1590 284.8,1590 284.8,1553.6 100,1553.6 100,1583.6</av:PointCollection>
+                                                                                                <av:PointCollection x:Key="FalseConnector">385.2,1590 415.2,1590 415.2,1600 545.2,1600</av:PointCollection>
                                                                                               </scg:Dictionary>
                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                             <FlowDecision.True>
-                                                                                              <FlowStep x:Name="__ReferenceID31">
+                                                                                              <FlowStep x:Name="__ReferenceID27">
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                    <av:Point x:Key="ShapeLocation">0,1723.6</av:Point>
+                                                                                                    <av:Point x:Key="ShapeLocation">0,1583.6</av:Point>
                                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                    <av:PointCollection x:Key="ConnectorLocation">100,1776.4 100,1806.4 350,1806.4 350,1826.4</av:PointCollection>
+                                                                                                    <av:PointCollection x:Key="ConnectorLocation">100,1636.4 100,1666.4 370,1666.4 370,1706.4</av:PointCollection>
                                                                                                   </scg:Dictionary>
                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoCustomerRepair workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="InvokeMethods\NoCustomerRepair.xaml">
+                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoESP workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="InvokeMethods\NoESP.xaml">
                                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="RepairValue">
-                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;CustomerRepair&quot;).ToString" />
-                                                                                                    </InArgument>
-                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                    </InArgument>
-                                                                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="PromoCardCheck">
-                                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="PromoCardCheck" />
-                                                                                                    </InOutArgument>
+                                                                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="CustRepairCheck">[CustRepairCheck]</InOutArgument>
+                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ESPValue">[TestDataRow.Item("ESP").ToString]</InArgument>
+                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -507,36 +463,30 @@
                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                 </ui:InvokeWorkflowFile>
                                                                                                 <FlowStep.Next>
-                                                                                                  <FlowDecision x:Name="__ReferenceID33" Condition="[PromoCardCheck]" DisplayName="PromoCardCheck" sap:VirtualizedContainerService.HintSize="96.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
+                                                                                                  <FlowDecision x:Name="__ReferenceID32" Condition="[CustRepairCheck]" DisplayName="CustRepairCheck" sap:VirtualizedContainerService.HintSize="93.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                        <av:Point x:Key="ShapeLocation">301.6,1826.4</av:Point>
-                                                                                                        <av:Size x:Key="ShapeSize">96.8,87.2</av:Size>
-                                                                                                        <av:PointCollection x:Key="TrueConnector">301.6,1870 110,1870 110,1873.6</av:PointCollection>
-                                                                                                        <av:PointCollection x:Key="FalseConnector">398.4,1870 428.4,1870 428.4,1880 455.2,1880</av:PointCollection>
+                                                                                                        <av:Point x:Key="ShapeLocation">323.2,1706.4</av:Point>
+                                                                                                        <av:Size x:Key="ShapeSize">93.6,87.2</av:Size>
+                                                                                                        <av:PointCollection x:Key="TrueConnector">323.2,1750 293.2,1750 293.2,1693.6 100,1693.6 100,1723.6</av:PointCollection>
+                                                                                                        <av:PointCollection x:Key="FalseConnector">416.8,1750 446.8,1750 446.8,1770 475.2,1770</av:PointCollection>
                                                                                                       </scg:Dictionary>
                                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                                     <FlowDecision.True>
-                                                                                                      <FlowStep x:Name="__ReferenceID35">
+                                                                                                      <FlowStep x:Name="__ReferenceID31">
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                            <av:Point x:Key="ShapeLocation">10,1873.6</av:Point>
+                                                                                                            <av:Point x:Key="ShapeLocation">0,1723.6</av:Point>
                                                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                            <av:PointCollection x:Key="ConnectorLocation">110,1926.4 110,1956.4 370,1956.4 370,1976.4</av:PointCollection>
+                                                                                                            <av:PointCollection x:Key="ConnectorLocation">100,1776.4 100,1806.4 350,1806.4 350,1826.4</av:PointCollection>
                                                                                                           </scg:Dictionary>
                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Promocardr workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="InvokeMethods\PromoCardEntry.xaml">
+                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoCustomerRepair workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="InvokeMethods\NoCustomerRepair.xaml">
                                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                            </InArgument>
-                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="Promocode">
-                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;PromoCard&quot;).ToString" />
-                                                                                                            </InArgument>
-                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="RedeemCheck">
-                                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="RedeemCheck" />
-                                                                                                            </OutArgument>
+                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="RepairValue">[TestDataRow.Item("CustomerRepair").ToString]</InArgument>
+                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                                            <InOutArgument x:TypeArguments="x:Boolean" x:Key="PromoCardCheck">[PromoCardCheck]</InOutArgument>
                                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -545,34 +495,30 @@
                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                         </ui:InvokeWorkflowFile>
                                                                                                         <FlowStep.Next>
-                                                                                                          <FlowDecision x:Name="__ReferenceID36" Condition="[RedeemCheck]" DisplayName="RedeemCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
+                                                                                                          <FlowDecision x:Name="__ReferenceID33" Condition="[PromoCardCheck]" DisplayName="PromoCardCheck" sap:VirtualizedContainerService.HintSize="96.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                <av:Point x:Key="ShapeLocation">329.6,1976.4</av:Point>
-                                                                                                                <av:Size x:Key="ShapeSize">80.8,87.2</av:Size>
-                                                                                                                <av:PointCollection x:Key="TrueConnector">329.6,2020 130,2020 130,2023.6</av:PointCollection>
-                                                                                                                <av:PointCollection x:Key="FalseConnector">410.4,2020 440.4,2020 440.4,2030 445.2,2030</av:PointCollection>
+                                                                                                                <av:Point x:Key="ShapeLocation">301.6,1826.4</av:Point>
+                                                                                                                <av:Size x:Key="ShapeSize">96.8,87.2</av:Size>
+                                                                                                                <av:PointCollection x:Key="TrueConnector">301.6,1870 110,1870 110,1873.6</av:PointCollection>
+                                                                                                                <av:PointCollection x:Key="FalseConnector">398.4,1870 428.4,1870 428.4,1880 455.2,1880</av:PointCollection>
                                                                                                               </scg:Dictionary>
                                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                                             <FlowDecision.True>
-                                                                                                              <FlowStep x:Name="__ReferenceID37">
+                                                                                                              <FlowStep x:Name="__ReferenceID35">
                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                    <av:Point x:Key="ShapeLocation">30,2023.6</av:Point>
+                                                                                                                    <av:Point x:Key="ShapeLocation">10,1873.6</av:Point>
                                                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">130,2076.4 130,2106.4 430,2106.4 430,2166.4</av:PointCollection>
+                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">110,1926.4 110,1956.4 370,1956.4 370,1976.4</av:PointCollection>
                                                                                                                   </scg:Dictionary>
                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Redeemworkflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="InvokeMethods\NoRedeemCertificates.xaml">
+                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Promocardr workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="InvokeMethods\PromoCardEntry.xaml">
                                                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                    </InArgument>
-                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="DownpaymentCheck">
-                                                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="DownpaymentCheck" />
-                                                                                                                    </OutArgument>
-                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="Promocode">[TestDataRow.Item("PromoCard").ToString]</InArgument>
+                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="RedeemCheck">[RedeemCheck]</OutArgument>
                                                                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -581,33 +527,30 @@
                                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                                 </ui:InvokeWorkflowFile>
                                                                                                                 <FlowStep.Next>
-                                                                                                                  <FlowDecision x:Name="__ReferenceID39" Condition="[DownpaymentCheck]" DisplayName="DownpaymentCheck" sap:VirtualizedContainerService.HintSize="114.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
+                                                                                                                  <FlowDecision x:Name="__ReferenceID36" Condition="[RedeemCheck]" DisplayName="RedeemCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                        <av:Point x:Key="ShapeLocation">372.8,2166.4</av:Point>
-                                                                                                                        <av:Size x:Key="ShapeSize">114.4,87.2</av:Size>
-                                                                                                                        <av:PointCollection x:Key="TrueConnector">372.8,2210 342.8,2210 342.8,2153.6 140,2153.6 140,2183.6</av:PointCollection>
-                                                                                                                        <av:PointCollection x:Key="FalseConnector">487.2,2210 517.2,2210 517.2,2130 565.2,2130</av:PointCollection>
+                                                                                                                        <av:Point x:Key="ShapeLocation">329.6,1976.4</av:Point>
+                                                                                                                        <av:Size x:Key="ShapeSize">80.8,87.2</av:Size>
+                                                                                                                        <av:PointCollection x:Key="TrueConnector">329.6,2020 130,2020 130,2023.6</av:PointCollection>
+                                                                                                                        <av:PointCollection x:Key="FalseConnector">410.4,2020 440.4,2020 440.4,2030 445.2,2030</av:PointCollection>
                                                                                                                       </scg:Dictionary>
                                                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                                                     <FlowDecision.True>
-                                                                                                                      <FlowStep x:Name="__ReferenceID40">
+                                                                                                                      <FlowStep x:Name="__ReferenceID37">
                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                            <av:Point x:Key="ShapeLocation">40,2183.6</av:Point>
+                                                                                                                            <av:Point x:Key="ShapeLocation">30,2023.6</av:Point>
                                                                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">140,2236.4 140,2266.4 20,2266.4 20,2156.4 335.2,2156.4 335.2,2246.4</av:PointCollection>
+                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">130,2076.4 130,2106.4 430,2106.4 430,2166.4</av:PointCollection>
                                                                                                                           </scg:Dictionary>
                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Downpaymentflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="InvokeMethods\RevolvingChargeDownPayment.xaml">
+                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Redeemworkflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="InvokeMethods\NoRedeemCertificates.xaml">
                                                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                            </InArgument>
-                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingCustomerCheck">
-                                                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="RevolvingCustomerCheck" />
-                                                                                                                            </OutArgument>
+                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="DownpaymentCheck">[DownpaymentCheck]</OutArgument>
+                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
                                                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -616,36 +559,30 @@
                                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                                         </ui:InvokeWorkflowFile>
                                                                                                                         <FlowStep.Next>
-                                                                                                                          <FlowDecision x:Name="__ReferenceID43" DisplayName="RevolvingCustomerCheck" sap:VirtualizedContainerService.HintSize="139.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
-                                                                                                                            <FlowDecision.Condition>
-                                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="RevolvingCustomerCheck" />
-                                                                                                                            </FlowDecision.Condition>
+                                                                                                                          <FlowDecision x:Name="__ReferenceID39" Condition="[DownpaymentCheck]" DisplayName="DownpaymentCheck" sap:VirtualizedContainerService.HintSize="114.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                                <av:Point x:Key="ShapeLocation">300.4,2246.4</av:Point>
-                                                                                                                                <av:Size x:Key="ShapeSize">139.2,87.2</av:Size>
-                                                                                                                                <av:PointCollection x:Key="TrueConnector">300.4,2290 270.4,2290 270.4,2300 250,2300</av:PointCollection>
-                                                                                                                                <av:PointCollection x:Key="FalseConnector">439.6,2290 505.2,2290 505.2,2250 535.2,2250</av:PointCollection>
+                                                                                                                                <av:Point x:Key="ShapeLocation">372.8,2166.4</av:Point>
+                                                                                                                                <av:Size x:Key="ShapeSize">114.4,87.2</av:Size>
+                                                                                                                                <av:PointCollection x:Key="TrueConnector">372.8,2210 342.8,2210 342.8,2153.6 140,2153.6 140,2183.6</av:PointCollection>
+                                                                                                                                <av:PointCollection x:Key="FalseConnector">487.2,2210 517.2,2210 517.2,2130 565.2,2130</av:PointCollection>
                                                                                                                               </scg:Dictionary>
                                                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                                                             <FlowDecision.True>
-                                                                                                                              <FlowStep x:Name="__ReferenceID44">
+                                                                                                                              <FlowStep x:Name="__ReferenceID40">
                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                    <av:Point x:Key="ShapeLocation">50,2273.6</av:Point>
+                                                                                                                                    <av:Point x:Key="ShapeLocation">40,2183.6</av:Point>
                                                                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">150,2326.4 150,2356.4 360,2356.4 360,2386.4</av:PointCollection>
+                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">140,2236.4 140,2266.4 20,2266.4 20,2156.4 335.2,2156.4 335.2,2246.4</av:PointCollection>
                                                                                                                                   </scg:Dictionary>
                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Downpaymentflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods\EnterTenderRevoloving.xaml">
+                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Revolving Downpaymentflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="InvokeMethods\RevolvingChargeDownPayment.xaml">
                                                                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="TendersCheck">
-                                                                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="TendersCheck" />
-                                                                                                                                    </OutArgument>
-                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                                    </InArgument>
+                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingCustomerCheck">[RevolvingCustomerCheck]</OutArgument>
+                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="Lastname">[TestDataRow.Item("LastName").ToString]</InArgument>
                                                                                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -654,36 +591,29 @@
                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                                                 </ui:InvokeWorkflowFile>
                                                                                                                                 <FlowStep.Next>
-                                                                                                                                  <FlowDecision x:Name="__ReferenceID47" DisplayName="TendersCheck" sap:VirtualizedContainerService.HintSize="77.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
-                                                                                                                                    <FlowDecision.Condition>
-                                                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TendersCheck" />
-                                                                                                                                    </FlowDecision.Condition>
+                                                                                                                                  <FlowDecision x:Name="__ReferenceID43" Condition="[RevolvingCustomerCheck]" DisplayName="RevolvingCustomerCheck" sap:VirtualizedContainerService.HintSize="139.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
                                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                                        <av:Point x:Key="ShapeLocation">321.2,2386.4</av:Point>
-                                                                                                                                        <av:Size x:Key="ShapeSize">77.6,87.2</av:Size>
-                                                                                                                                        <av:PointCollection x:Key="TrueConnector">321.2,2430 291.2,2430 291.2,2400 260,2400</av:PointCollection>
-                                                                                                                                        <av:PointCollection x:Key="FalseConnector">398.8,2430 428.8,2430 428.8,2370 505.2,2370</av:PointCollection>
+                                                                                                                                        <av:Point x:Key="ShapeLocation">300.4,2246.4</av:Point>
+                                                                                                                                        <av:Size x:Key="ShapeSize">139.2,87.2</av:Size>
+                                                                                                                                        <av:PointCollection x:Key="TrueConnector">300.4,2290 270.4,2290 270.4,2300 250,2300</av:PointCollection>
+                                                                                                                                        <av:PointCollection x:Key="FalseConnector">439.6,2290 505.2,2290 505.2,2250 535.2,2250</av:PointCollection>
                                                                                                                                       </scg:Dictionary>
                                                                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                                                                     <FlowDecision.True>
-                                                                                                                                      <FlowStep x:Name="__ReferenceID46">
+                                                                                                                                      <FlowStep x:Name="__ReferenceID44">
                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                            <av:Point x:Key="ShapeLocation">60,2373.6</av:Point>
+                                                                                                                                            <av:Point x:Key="ShapeLocation">50,2273.6</av:Point>
                                                                                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">160,2426.4 160,2476.4 380,2476.4 380,2506.4</av:PointCollection>
+                                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">150,2326.4 150,2356.4 360,2356.4 360,2386.4</av:PointCollection>
                                                                                                                                           </scg:Dictionary>
                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke rewardsflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="InvokeMethods\NoRewards.xaml">
+                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Tender Revolving flow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods\EnterTenderRevoloving.xaml">
                                                                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="GiftReceiptCheck">
-                                                                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="GiftReceiptCheck" />
-                                                                                                                                            </OutArgument>
-                                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                                            </InArgument>
+                                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="TendersCheck">[TendersCheck]</OutArgument>
+                                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -692,36 +622,29 @@
                                                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                                                         </ui:InvokeWorkflowFile>
                                                                                                                                         <FlowStep.Next>
-                                                                                                                                          <FlowDecision x:Name="__ReferenceID48" DisplayName="GiftReceiptCheck" sap:VirtualizedContainerService.HintSize="96,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
-                                                                                                                                            <FlowDecision.Condition>
-                                                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="GiftReceiptCheck" />
-                                                                                                                                            </FlowDecision.Condition>
+                                                                                                                                          <FlowDecision x:Name="__ReferenceID47" Condition="[TendersCheck]" DisplayName="TendersCheck" sap:VirtualizedContainerService.HintSize="77.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
                                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                                                <av:Point x:Key="ShapeLocation">332,2506.4</av:Point>
-                                                                                                                                                <av:Size x:Key="ShapeSize">96,87.2</av:Size>
-                                                                                                                                                <av:PointCollection x:Key="TrueConnector">332,2550 302,2550 302,2510 250,2510</av:PointCollection>
-                                                                                                                                                <av:PointCollection x:Key="FalseConnector">428,2550 458,2550 458,2540 475.2,2540</av:PointCollection>
+                                                                                                                                                <av:Point x:Key="ShapeLocation">321.2,2386.4</av:Point>
+                                                                                                                                                <av:Size x:Key="ShapeSize">77.6,87.2</av:Size>
+                                                                                                                                                <av:PointCollection x:Key="TrueConnector">321.2,2430 291.2,2430 291.2,2400 260,2400</av:PointCollection>
+                                                                                                                                                <av:PointCollection x:Key="FalseConnector">398.8,2430 428.8,2430 428.8,2370 505.2,2370</av:PointCollection>
                                                                                                                                               </scg:Dictionary>
                                                                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                                                                             <FlowDecision.True>
-                                                                                                                                              <FlowStep x:Name="__ReferenceID49">
+                                                                                                                                              <FlowStep x:Name="__ReferenceID46">
                                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                    <av:Point x:Key="ShapeLocation">50,2483.6</av:Point>
+                                                                                                                                                    <av:Point x:Key="ShapeLocation">60,2373.6</av:Point>
                                                                                                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">150,2536.4 150,2566.4 390,2566.4 390,2616.4</av:PointCollection>
+                                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">160,2426.4 160,2476.4 380,2476.4 380,2506.4</av:PointCollection>
                                                                                                                                                   </scg:Dictionary>
                                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftReceipt.xaml">
+                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke rewardsflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="InvokeMethods\NoRewards.xaml">
                                                                                                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ReceiptEmailCheck">
-                                                                                                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ReceiptEmailCheck" />
-                                                                                                                                                    </OutArgument>
-                                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                                                    </InArgument>
+                                                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="GiftReceiptCheck">[GiftReceiptCheck]</OutArgument>
+                                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                                                                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -730,36 +653,29 @@
                                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                 </ui:InvokeWorkflowFile>
                                                                                                                                                 <FlowStep.Next>
-                                                                                                                                                  <FlowDecision x:Name="__ReferenceID50" DisplayName="ReceiptEmailCheck" sap:VirtualizedContainerService.HintSize="106.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
-                                                                                                                                                    <FlowDecision.Condition>
-                                                                                                                                                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ReceiptEmailCheck" />
-                                                                                                                                                    </FlowDecision.Condition>
+                                                                                                                                                  <FlowDecision x:Name="__ReferenceID48" Condition="[GiftReceiptCheck]" DisplayName="GiftReceiptCheck" sap:VirtualizedContainerService.HintSize="96,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
                                                                                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                                                        <av:Point x:Key="ShapeLocation">336.8,2616.4</av:Point>
-                                                                                                                                                        <av:Size x:Key="ShapeSize">106.4,87.2</av:Size>
-                                                                                                                                                        <av:PointCollection x:Key="TrueConnector">336.8,2660 306.8,2660 306.8,2630 280,2630</av:PointCollection>
-                                                                                                                                                        <av:PointCollection x:Key="FalseConnector">443.2,2660 473.2,2660 473.2,2640 495.2,2640</av:PointCollection>
+                                                                                                                                                        <av:Point x:Key="ShapeLocation">332,2506.4</av:Point>
+                                                                                                                                                        <av:Size x:Key="ShapeSize">96,87.2</av:Size>
+                                                                                                                                                        <av:PointCollection x:Key="TrueConnector">332,2550 302,2550 302,2510 250,2510</av:PointCollection>
+                                                                                                                                                        <av:PointCollection x:Key="FalseConnector">428,2550 458,2550 458,2540 475.2,2540</av:PointCollection>
                                                                                                                                                       </scg:Dictionary>
                                                                                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                     <FlowDecision.True>
-                                                                                                                                                      <FlowStep x:Name="__ReferenceID52">
+                                                                                                                                                      <FlowStep x:Name="__ReferenceID49">
                                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                            <av:Point x:Key="ShapeLocation">80,2603.6</av:Point>
+                                                                                                                                                            <av:Point x:Key="ShapeLocation">50,2483.6</av:Point>
                                                                                                                                                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">180,2656.4 180,2730 460,2730</av:PointCollection>
+                                                                                                                                                            <av:PointCollection x:Key="ConnectorLocation">150,2536.4 150,2566.4 390,2566.4 390,2616.4</av:PointCollection>
                                                                                                                                                           </scg:Dictionary>
                                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
+                                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftReceipt.xaml">
                                                                                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">
-                                                                                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="POSMenuCheck" />
-                                                                                                                                                            </OutArgument>
-                                                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                                                                            </InArgument>
+                                                                                                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="ReceiptEmailCheck">[ReceiptEmailCheck]</OutArgument>
+                                                                                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                                                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -768,31 +684,101 @@
                                                                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                         </ui:InvokeWorkflowFile>
                                                                                                                                                         <FlowStep.Next>
-                                                                                                                                                          <FlowStep x:Name="__ReferenceID9">
+                                                                                                                                                          <FlowDecision x:Name="__ReferenceID50" Condition="[ReceiptEmailCheck]" DisplayName="ReceiptEmailCheck" sap:VirtualizedContainerService.HintSize="106.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
                                                                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                                <av:Point x:Key="ShapeLocation">460,2703.6</av:Point>
-                                                                                                                                                                <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                                <av:Point x:Key="ShapeLocation">336.8,2616.4</av:Point>
+                                                                                                                                                                <av:Size x:Key="ShapeSize">106.4,87.2</av:Size>
+                                                                                                                                                                <av:PointCollection x:Key="TrueConnector">336.8,2660 306.8,2660 306.8,2630 280,2630</av:PointCollection>
+                                                                                                                                                                <av:PointCollection x:Key="FalseConnector">443.2,2660 473.2,2660 473.2,2640 495.2,2640</av:PointCollection>
                                                                                                                                                               </scg:Dictionary>
                                                                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoHome File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="GotoPOSHome.xaml">
-                                                                                                                                                              <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                                                                                                                                              </ui:InvokeWorkflowFile.Arguments>
-                                                                                                                                                            </ui:InvokeWorkflowFile>
-                                                                                                                                                          </FlowStep>
+                                                                                                                                                            <FlowDecision.True>
+                                                                                                                                                              <FlowStep x:Name="__ReferenceID52">
+                                                                                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                    <av:Point x:Key="ShapeLocation">80,2603.6</av:Point>
+                                                                                                                                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                                                                                                                    <av:PointCollection x:Key="ConnectorLocation">180,2656.4 180,2686.4 330,2686.4 330,2768.8</av:PointCollection>
+                                                                                                                                                                  </scg:Dictionary>
+                                                                                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
+                                                                                                                                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">[POSMenuCheck]</OutArgument>
+                                                                                                                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                                                                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                                    </scg:Dictionary>
+                                                                                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                </ui:InvokeWorkflowFile>
+                                                                                                                                                                <FlowStep.Next>
+                                                                                                                                                                  <FlowStep x:Name="__ReferenceID58">
+                                                                                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                        <av:Point x:Key="ShapeLocation">215.2,2768.8</av:Point>
+                                                                                                                                                                        <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
+                                                                                                                                                                        <av:PointCollection x:Key="ConnectorLocation">444.8,2800 460,2800 460,2850 190,2850 190,2730 460,2730</av:PointCollection>
+                                                                                                                                                                      </scg:Dictionary>
+                                                                                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_40" Text="[TestDataRow.Item(&quot;Scenario&quot;).ToString+&quot;Completed&quot;]">
+                                                                                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                                        </scg:Dictionary>
+                                                                                                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                    </WriteLine>
+                                                                                                                                                                    <FlowStep.Next>
+                                                                                                                                                                      <FlowStep x:Name="__ReferenceID10">
+                                                                                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                            <av:Point x:Key="ShapeLocation">460,2703.6</av:Point>
+                                                                                                                                                                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                                                                                                                          </scg:Dictionary>
+                                                                                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GotoHome File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="GotoPOSHome.xaml">
+                                                                                                                                                                          <ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                                                                                                                          </ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                                                        </ui:InvokeWorkflowFile>
+                                                                                                                                                                      </FlowStep>
+                                                                                                                                                                    </FlowStep.Next>
+                                                                                                                                                                  </FlowStep>
+                                                                                                                                                                </FlowStep.Next>
+                                                                                                                                                              </FlowStep>
+                                                                                                                                                            </FlowDecision.True>
+                                                                                                                                                            <FlowDecision.False>
+                                                                                                                                                              <FlowStep x:Name="__ReferenceID54">
+                                                                                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                    <av:Point x:Key="ShapeLocation">495.2,2608.8</av:Point>
+                                                                                                                                                                    <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
+                                                                                                                                                                  </scg:Dictionary>
+                                                                                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;POS  Receipt Emailed page is not displayed&quot;+TendersCheck.ToString]">
+                                                                                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                                    </scg:Dictionary>
+                                                                                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                                                </WriteLine>
+                                                                                                                                                              </FlowStep>
+                                                                                                                                                            </FlowDecision.False>
+                                                                                                                                                          </FlowDecision>
                                                                                                                                                         </FlowStep.Next>
                                                                                                                                                       </FlowStep>
                                                                                                                                                     </FlowDecision.True>
                                                                                                                                                     <FlowDecision.False>
-                                                                                                                                                      <FlowStep x:Name="__ReferenceID54">
+                                                                                                                                                      <FlowStep x:Name="__ReferenceID53">
                                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                            <av:Point x:Key="ShapeLocation">495.2,2608.8</av:Point>
+                                                                                                                                                            <av:Point x:Key="ShapeLocation">475.2,2508.8</av:Point>
                                                                                                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                                                           </scg:Dictionary>
                                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;POS  Receipt Emailed page is not displayed&quot;+TendersCheck.ToString]">
+                                                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;POS Gift Receipt page is not displayed&quot;+TendersCheck.ToString]">
                                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -806,14 +792,14 @@
                                                                                                                                               </FlowStep>
                                                                                                                                             </FlowDecision.True>
                                                                                                                                             <FlowDecision.False>
-                                                                                                                                              <FlowStep x:Name="__ReferenceID53">
+                                                                                                                                              <FlowStep x:Name="__ReferenceID51">
                                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                                    <av:Point x:Key="ShapeLocation">475.2,2508.8</av:Point>
+                                                                                                                                                    <av:Point x:Key="ShapeLocation">505.2,2338.8</av:Point>
                                                                                                                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                                                   </scg:Dictionary>
                                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;POS Gift Receipt page is not displayed&quot;+TendersCheck.ToString]">
+                                                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;POS Rewards page is not displayed&quot;+TendersCheck.ToString]">
                                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -827,14 +813,14 @@
                                                                                                                                       </FlowStep>
                                                                                                                                     </FlowDecision.True>
                                                                                                                                     <FlowDecision.False>
-                                                                                                                                      <FlowStep x:Name="__ReferenceID51">
+                                                                                                                                      <FlowStep x:Name="__ReferenceID45">
                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                            <av:Point x:Key="ShapeLocation">505.2,2338.8</av:Point>
+                                                                                                                                            <av:Point x:Key="ShapeLocation">535.2,2218.8</av:Point>
                                                                                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                                           </scg:Dictionary>
                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;POS Rewards page is not displayed&quot;+TendersCheck.ToString]">
+                                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[&quot;POS Tender page is not displayed&quot;+DownpaymentCheck.ToString]">
                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -848,14 +834,14 @@
                                                                                                                               </FlowStep>
                                                                                                                             </FlowDecision.True>
                                                                                                                             <FlowDecision.False>
-                                                                                                                              <FlowStep x:Name="__ReferenceID45">
+                                                                                                                              <FlowStep x:Name="__ReferenceID41">
                                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                                    <av:Point x:Key="ShapeLocation">535.2,2218.8</av:Point>
+                                                                                                                                    <av:Point x:Key="ShapeLocation">565.2,2098.8</av:Point>
                                                                                                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                                   </scg:Dictionary>
                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[&quot;POS Tender page is not displayed&quot;+DownpaymentCheck.ToString]">
+                                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;POS DownPayment page is not displayed&quot;+DownpaymentCheck.ToString]">
                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -869,14 +855,14 @@
                                                                                                                       </FlowStep>
                                                                                                                     </FlowDecision.True>
                                                                                                                     <FlowDecision.False>
-                                                                                                                      <FlowStep x:Name="__ReferenceID41">
+                                                                                                                      <FlowStep x:Name="__ReferenceID38">
                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                            <av:Point x:Key="ShapeLocation">565.2,2098.8</av:Point>
+                                                                                                                            <av:Point x:Key="ShapeLocation">445.2,1998.8</av:Point>
                                                                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                           </scg:Dictionary>
                                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;POS DownPayment page is not displayed&quot;+DownpaymentCheck.ToString]">
+                                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="POS Redeem page is not displayed">
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -890,14 +876,14 @@
                                                                                                               </FlowStep>
                                                                                                             </FlowDecision.True>
                                                                                                             <FlowDecision.False>
-                                                                                                              <FlowStep x:Name="__ReferenceID38">
+                                                                                                              <FlowStep x:Name="__ReferenceID34">
                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                    <av:Point x:Key="ShapeLocation">445.2,1998.8</av:Point>
+                                                                                                                    <av:Point x:Key="ShapeLocation">455.2,1848.8</av:Point>
                                                                                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                                   </scg:Dictionary>
                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="POS Redeem page is not displayed">
+                                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="POS Promo card  page is not displayed">
                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -911,14 +897,14 @@
                                                                                                       </FlowStep>
                                                                                                     </FlowDecision.True>
                                                                                                     <FlowDecision.False>
-                                                                                                      <FlowStep x:Name="__ReferenceID34">
+                                                                                                      <FlowStep x:Name="__ReferenceID29">
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                            <av:Point x:Key="ShapeLocation">455.2,1848.8</av:Point>
+                                                                                                            <av:Point x:Key="ShapeLocation">475.2,1738.8</av:Point>
                                                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                           </scg:Dictionary>
                                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="POS Promo card  page is not displayed">
+                                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="POS DiamonBond  page is not displayed">
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -932,14 +918,14 @@
                                                                                               </FlowStep>
                                                                                             </FlowDecision.True>
                                                                                             <FlowDecision.False>
-                                                                                              <FlowStep x:Name="__ReferenceID29">
+                                                                                              <FlowStep x:Name="__ReferenceID42">
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                    <av:Point x:Key="ShapeLocation">475.2,1738.8</av:Point>
+                                                                                                    <av:Point x:Key="ShapeLocation">545.2,1568.8</av:Point>
                                                                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                                   </scg:Dictionary>
                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="POS DiamonBond  page is not displayed">
+                                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="POS ESP  page is not displayed">
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -953,14 +939,14 @@
                                                                                       </FlowStep>
                                                                                     </FlowDecision.True>
                                                                                     <FlowDecision.False>
-                                                                                      <FlowStep x:Name="__ReferenceID42">
+                                                                                      <FlowStep x:Name="__ReferenceID28">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                            <av:Point x:Key="ShapeLocation">485.2,1488.8</av:Point>
+                                                                                            <av:Point x:Key="ShapeLocation">505.2,1398.8</av:Point>
                                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="POS ESP  page is not displayed">
+                                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="POS Diamond Bond  page is not displayed">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -974,14 +960,14 @@
                                                                               </FlowStep>
                                                                             </FlowDecision.True>
                                                                             <FlowDecision.False>
-                                                                              <FlowStep x:Name="__ReferenceID28">
+                                                                              <FlowStep x:Name="__ReferenceID23">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <av:Point x:Key="ShapeLocation">505.2,1398.8</av:Point>
+                                                                                    <av:Point x:Key="ShapeLocation">575.2,1208.8</av:Point>
                                                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="POS Diamond Bond  page is not displayed">
+                                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="POS SSN Customer page is not displayed">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -995,14 +981,14 @@
                                                                       </FlowStep>
                                                                     </FlowDecision.True>
                                                                     <FlowDecision.False>
-                                                                      <FlowStep x:Name="__ReferenceID23">
+                                                                      <FlowStep x:Name="__ReferenceID22">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                            <av:Point x:Key="ShapeLocation">455.2,1198.8</av:Point>
+                                                                            <av:Point x:Key="ShapeLocation">575.2,1118.8</av:Point>
                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="POS SSN Customer page is not displayed">
+                                                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="POS SSN page is not displayed">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1016,20 +1002,24 @@
                                                               </FlowStep>
                                                             </FlowDecision.True>
                                                             <FlowDecision.False>
-                                                              <FlowStep x:Name="__ReferenceID21">
+                                                              <FlowStep x:Name="__ReferenceID57">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <av:Point x:Key="ShapeLocation">465.2,1048.8</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
+                                                                    <av:Point x:Key="ShapeLocation">540,1053.6</av:Point>
+                                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                    <av:PointCollection x:Key="ConnectorLocation">640,1106.4 640,1136.4 380.8,1136.4 380.8,1246.4</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="POS SSN page is not displayed">
-                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    </scg:Dictionary>
-                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                </WriteLine>
+                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Customer Search File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="InvokeMethods\CustomerSearch.xaml">
+                                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="LastName">[TestDataRow.Item("LastName").ToString]</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName" />
+                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="SSNCardCheck">[SSNCardCheck]</OutArgument>
+                                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                                </ui:InvokeWorkflowFile>
+                                                                <FlowStep.Next>
+                                                                  <x:Reference>__ReferenceID0</x:Reference>
+                                                                </FlowStep.Next>
                                                               </FlowStep>
                                                             </FlowDecision.False>
                                                           </FlowDecision>
@@ -1037,10 +1027,10 @@
                                                       </FlowStep>
                                                     </FlowDecision.True>
                                                     <FlowDecision.False>
-                                                      <FlowStep x:Name="__ReferenceID20">
+                                                      <FlowStep x:Name="__ReferenceID21">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <av:Point x:Key="ShapeLocation">495.2,958.8</av:Point>
+                                                            <av:Point x:Key="ShapeLocation">635.2,908.8</av:Point>
                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
@@ -1058,10 +1048,10 @@
                                               </FlowStep>
                                             </FlowDecision.True>
                                             <FlowDecision.False>
-                                              <FlowStep x:Name="__ReferenceID15">
+                                              <FlowStep x:Name="__ReferenceID16">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">535.2,838.8</av:Point>
+                                                    <av:Point x:Key="ShapeLocation">625.2,808.8</av:Point>
                                                     <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -1079,7 +1069,7 @@
                                       </FlowStep>
                                     </FlowDecision.True>
                                     <FlowDecision.False>
-                                      <FlowStep x:Name="__ReferenceID11">
+                                      <FlowStep x:Name="__ReferenceID12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">485.2,688.8</av:Point>
@@ -1100,7 +1090,7 @@
                               </FlowStep>
                             </FlowDecision.True>
                             <FlowDecision.False>
-                              <FlowStep x:Name="__ReferenceID6">
+                              <FlowStep x:Name="__ReferenceID7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">425.2,598.8</av:Point>
@@ -1121,7 +1111,7 @@
                       </FlowStep>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID5">
+                      <FlowStep x:Name="__ReferenceID6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">425.2,478.8</av:Point>
@@ -1142,7 +1132,7 @@
               </FlowStep>
             </FlowDecision.True>
             <FlowDecision.False>
-              <FlowStep x:Name="__ReferenceID2">
+              <FlowStep x:Name="__ReferenceID3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">415.2,348.8</av:Point>
@@ -1161,7 +1151,6 @@
           </FlowDecision>
         </FlowStep.Next>
       </FlowStep>
-      <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
       <x:Reference>__ReferenceID3</x:Reference>
@@ -1184,6 +1173,7 @@
       <x:Reference>__ReferenceID20</x:Reference>
       <x:Reference>__ReferenceID21</x:Reference>
       <x:Reference>__ReferenceID22</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID23</x:Reference>
       <x:Reference>__ReferenceID24</x:Reference>
       <FlowStep>
@@ -1231,6 +1221,29 @@
       <x:Reference>__ReferenceID52</x:Reference>
       <x:Reference>__ReferenceID53</x:Reference>
       <x:Reference>__ReferenceID54</x:Reference>
+      <x:Reference>__ReferenceID55</x:Reference>
+      <x:Reference>__ReferenceID56</x:Reference>
+      <FlowStep>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">625.2,968.8</av:Point>
+            <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">740,1031.2 740,1061.2 830,1061.2 830,2730 660,2730</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="POS Revolving N not displayed">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </WriteLine>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID10</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID57</x:Reference>
+      <x:Reference>__ReferenceID58</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>

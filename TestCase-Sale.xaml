@@ -108,9 +108,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
-        <x:Reference>__ReferenceID59</x:Reference>
+        <x:Reference>__ReferenceID60</x:Reference>
       </Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID59">
+      <FlowStep x:Name="__ReferenceID60">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,143.6</av:Point>
@@ -131,7 +131,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
         <FlowStep.Next>
-          <FlowDecision x:Name="__ReferenceID1" Condition="[AppMenuCheck]" DisplayName="AppMenuCheck" sap:VirtualizedContainerService.HintSize="88.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+          <FlowDecision x:Name="__ReferenceID0" Condition="[AppMenuCheck]" DisplayName="AppMenuCheck" sap:VirtualizedContainerService.HintSize="88.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +142,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <FlowDecision.True>
-              <FlowStep x:Name="__ReferenceID2">
+              <FlowStep x:Name="__ReferenceID1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">0,273.6</av:Point>
@@ -157,7 +157,7 @@
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <FlowStep.Next>
-                  <FlowDecision x:Name="__ReferenceID4" Condition="[POSMenuCheck]" DisplayName="POSMenuCheck" sap:VirtualizedContainerService.HintSize="88,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                  <FlowDecision x:Name="__ReferenceID3" Condition="[POSMenuCheck]" DisplayName="POSMenuCheck" sap:VirtualizedContainerService.HintSize="88,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -168,7 +168,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <FlowDecision.True>
-                      <FlowStep x:Name="__ReferenceID5">
+                      <FlowStep x:Name="__ReferenceID4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">0,463.6</av:Point>
@@ -183,7 +183,7 @@
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <FlowStep.Next>
-                          <FlowDecision x:Name="__ReferenceID8" Condition="[SalesPersonCheck]" DisplayName="SalesPersonCheck" sap:VirtualizedContainerService.HintSize="98.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                          <FlowDecision x:Name="__ReferenceID7" Condition="[SalesPersonCheck]" DisplayName="SalesPersonCheck" sap:VirtualizedContainerService.HintSize="98.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -194,7 +194,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <FlowDecision.True>
-                              <FlowStep x:Name="__ReferenceID9">
+                              <FlowStep x:Name="__ReferenceID8">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">0,583.6</av:Point>
@@ -210,7 +210,7 @@
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <FlowStep.Next>
-                                  <FlowDecision x:Name="__ReferenceID11" Condition="[SrcCodeCheck]" DisplayName="SrcCodeCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                  <FlowDecision x:Name="__ReferenceID10" Condition="[SrcCodeCheck]" DisplayName="SrcCodeCheck" sap:VirtualizedContainerService.HintSize="80.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,7 +221,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <FlowDecision.True>
-                                      <FlowStep x:Name="__ReferenceID13">
+                                      <FlowStep x:Name="__ReferenceID12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">20,713.6</av:Point>
@@ -236,7 +236,7 @@
                                           </ui:InvokeWorkflowFile.Arguments>
                                         </ui:InvokeWorkflowFile>
                                         <FlowStep.Next>
-                                          <FlowDecision x:Name="__ReferenceID14" Condition="[SaleCheck]" DisplayName="SaleCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                          <FlowDecision x:Name="__ReferenceID13" Condition="[SaleCheck]" DisplayName="SaleCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -247,7 +247,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <FlowDecision.True>
-                                              <FlowStep x:Name="__ReferenceID15">
+                                              <FlowStep x:Name="__ReferenceID14">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">30,813.6</av:Point>
@@ -262,7 +262,7 @@
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                 </ui:InvokeWorkflowFile>
                                                 <FlowStep.Next>
-                                                  <FlowDecision x:Name="__ReferenceID17" Condition="[RevolvingChargeCheck]" DisplayName="RevolvingCharge" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                                  <FlowDecision x:Name="__ReferenceID16" Condition="[RevolvingChargeCheck]" DisplayName="RevolvingCharge" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -297,11 +297,11 @@
                                                                 <av:Point x:Key="ShapeLocation">439.6,1016.4</av:Point>
                                                                 <av:Size x:Key="ShapeSize">80.8,87.2</av:Size>
                                                                 <av:PointCollection x:Key="TrueConnector">439.6,1060 -20,1060 -20,873.6 100,873.6 100,903.6</av:PointCollection>
-                                                                <av:PointCollection x:Key="FalseConnector">520.4,1060 640,1060 640,1053.6</av:PointCollection>
+                                                                <av:PointCollection x:Key="FalseConnector">520.4,1060 640,1060 640,1023.6</av:PointCollection>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <FlowDecision.True>
-                                                              <FlowStep x:Name="__ReferenceID18">
+                                                              <FlowStep x:Name="__ReferenceID17">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <av:Point x:Key="ShapeLocation">0,903.6</av:Point>
@@ -317,18 +317,18 @@
                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                 </ui:InvokeWorkflowFile>
                                                                 <FlowStep.Next>
-                                                                  <FlowDecision x:Name="__ReferenceID19" Condition="[SSNCheck]" DisplayName="SSNCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                                                  <FlowDecision x:Name="__ReferenceID18" Condition="[SSNCheck]" DisplayName="SSNCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <av:Point x:Key="ShapeLocation">294.8,1096.4</av:Point>
                                                                         <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
                                                                         <av:PointCollection x:Key="TrueConnector">294.8,1140 264.8,1140 264.8,1120 200,1120</av:PointCollection>
-                                                                        <av:PointCollection x:Key="FalseConnector">365.2,1140 395.2,1140 395.2,1150 575.2,1150</av:PointCollection>
+                                                                        <av:PointCollection x:Key="FalseConnector">365.2,1140 395.2,1140 395.2,1180 575.2,1180</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <FlowDecision.True>
-                                                                      <FlowStep x:Name="__ReferenceID20">
+                                                                      <FlowStep x:Name="__ReferenceID19">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <av:Point x:Key="ShapeLocation">0,1093.6</av:Point>
@@ -356,7 +356,7 @@
                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                         </ui:InvokeWorkflowFile>
                                                                         <FlowStep.Next>
-                                                                          <FlowDecision x:Name="__ReferenceID0" Condition="[SSNCardCheck]" DisplayName="SSNCardCheck" sap:VirtualizedContainerService.HintSize="83.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
+                                                                          <FlowDecision x:Name="__ReferenceID22" Condition="[SSNCardCheck]" DisplayName="SSNCardCheck" sap:VirtualizedContainerService.HintSize="83.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -704,7 +704,7 @@
                                                                                                                                                                     <av:PointCollection x:Key="ConnectorLocation">180,2656.4 180,2686.4 330,2686.4 330,2768.8</av:PointCollection>
                                                                                                                                                                   </scg:Dictionary>
                                                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
+                                                                                                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gift Redecipt" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftCard.xaml">
                                                                                                                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                                                                                                                     <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">
                                                                                                                                                                       <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="POSMenuCheck" />
@@ -736,7 +736,7 @@
                                                                                                                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                     </WriteLine>
                                                                                                                                                                     <FlowStep.Next>
-                                                                                                                                                                      <FlowStep x:Name="__ReferenceID10">
+                                                                                                                                                                      <FlowStep x:Name="__ReferenceID9">
                                                                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                             <av:Point x:Key="ShapeLocation">460,2703.6</av:Point>
@@ -986,10 +986,10 @@
                                                                       </FlowStep>
                                                                     </FlowDecision.True>
                                                                     <FlowDecision.False>
-                                                                      <FlowStep x:Name="__ReferenceID22">
+                                                                      <FlowStep x:Name="__ReferenceID21">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                            <av:Point x:Key="ShapeLocation">575.2,1118.8</av:Point>
+                                                                            <av:Point x:Key="ShapeLocation">575.2,1148.8</av:Point>
                                                                             <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
@@ -1010,9 +1010,9 @@
                                                               <FlowStep x:Name="__ReferenceID57">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <av:Point x:Key="ShapeLocation">540,1053.6</av:Point>
+                                                                    <av:Point x:Key="ShapeLocation">540,1023.6</av:Point>
                                                                     <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                                                    <av:PointCollection x:Key="ConnectorLocation">640,1106.4 640,1136.4 380.8,1136.4 380.8,1246.4</av:PointCollection>
+                                                                    <av:PointCollection x:Key="ConnectorLocation">640,1076.4 640,1106.4 710,1106.4 710,1113.6</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Customer Search File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="InvokeMethods\CustomerSearch.xaml">
@@ -1023,7 +1023,22 @@
                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                 </ui:InvokeWorkflowFile>
                                                                 <FlowStep.Next>
-                                                                  <x:Reference>__ReferenceID0</x:Reference>
+                                                                  <FlowStep x:Name="__ReferenceID59">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <av:Point x:Key="ShapeLocation">610,1113.6</av:Point>
+                                                                        <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">650,1116.4 650,1146.4 390.8,1146.4 390.8,1256.4</av:PointCollection>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Cash flowFile" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="SaleWithCashFlowNotRevolving.xaml">
+                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                        <InArgument x:TypeArguments="sd:DataRow" x:Key="TestData">
+                                                                          <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="TestDataRow" />
+                                                                        </InArgument>
+                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                    </ui:InvokeWorkflowFile>
+                                                                  </FlowStep>
                                                                 </FlowStep.Next>
                                                               </FlowStep>
                                                             </FlowDecision.False>
@@ -1032,7 +1047,7 @@
                                                       </FlowStep>
                                                     </FlowDecision.True>
                                                     <FlowDecision.False>
-                                                      <FlowStep x:Name="__ReferenceID21">
+                                                      <FlowStep x:Name="__ReferenceID20">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <av:Point x:Key="ShapeLocation">635.2,908.8</av:Point>
@@ -1053,7 +1068,7 @@
                                               </FlowStep>
                                             </FlowDecision.True>
                                             <FlowDecision.False>
-                                              <FlowStep x:Name="__ReferenceID16">
+                                              <FlowStep x:Name="__ReferenceID15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">625.2,808.8</av:Point>
@@ -1074,7 +1089,7 @@
                                       </FlowStep>
                                     </FlowDecision.True>
                                     <FlowDecision.False>
-                                      <FlowStep x:Name="__ReferenceID12">
+                                      <FlowStep x:Name="__ReferenceID11">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">485.2,688.8</av:Point>
@@ -1095,7 +1110,7 @@
                               </FlowStep>
                             </FlowDecision.True>
                             <FlowDecision.False>
-                              <FlowStep x:Name="__ReferenceID7">
+                              <FlowStep x:Name="__ReferenceID6">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">425.2,598.8</av:Point>
@@ -1116,7 +1131,7 @@
                       </FlowStep>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID6">
+                      <FlowStep x:Name="__ReferenceID5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">425.2,478.8</av:Point>
@@ -1137,7 +1152,7 @@
               </FlowStep>
             </FlowDecision.True>
             <FlowDecision.False>
-              <FlowStep x:Name="__ReferenceID3">
+              <FlowStep x:Name="__ReferenceID2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">415.2,348.8</av:Point>
@@ -1156,6 +1171,7 @@
           </FlowDecision>
         </FlowStep.Next>
       </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
       <x:Reference>__ReferenceID3</x:Reference>
@@ -1178,7 +1194,6 @@
       <x:Reference>__ReferenceID20</x:Reference>
       <x:Reference>__ReferenceID21</x:Reference>
       <x:Reference>__ReferenceID22</x:Reference>
-      <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID23</x:Reference>
       <x:Reference>__ReferenceID24</x:Reference>
       <FlowStep>
@@ -1244,11 +1259,12 @@
           </sap:WorkflowViewStateService.ViewState>
         </WriteLine>
         <FlowStep.Next>
-          <x:Reference>__ReferenceID10</x:Reference>
+          <x:Reference>__ReferenceID9</x:Reference>
         </FlowStep.Next>
       </FlowStep>
       <x:Reference>__ReferenceID57</x:Reference>
       <x:Reference>__ReferenceID58</x:Reference>
+      <x:Reference>__ReferenceID59</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>

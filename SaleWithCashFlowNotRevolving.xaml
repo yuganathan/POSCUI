@@ -419,14 +419,10 @@
                                                                                         <av:PointCollection x:Key="ConnectorLocation">220,2196.4 220,2226.4 457.2,2226.4 457.2,2236.4</av:PointCollection>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoRewards workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="InvokeMethods\NoRewards.xaml">
+                                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoRewards workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="InvokeMethods\NoRewards.xaml">
                                                                                       <ui:InvokeWorkflowFile.Arguments>
-                                                                                        <OutArgument x:TypeArguments="x:Boolean" x:Key="GiftReceiptCheck">
-                                                                                          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="GiftReceiptCheck" />
-                                                                                        </OutArgument>
-                                                                                        <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;Scenario&quot;).ToString" />
-                                                                                        </InArgument>
+                                                                                        <OutArgument x:TypeArguments="x:Boolean" x:Key="GiftReceiptCheck">[GiftReceiptCheck]</OutArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
                                                                                       </ui:InvokeWorkflowFile.Arguments>
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -454,10 +450,14 @@
                                                                                                 <av:PointCollection x:Key="ConnectorLocation">220,2346.4 220,2366.4 392,2366.4 392,2336.4 454.4,2336.4 454.4,2366.4</av:PointCollection>
                                                                                               </scg:Dictionary>
                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoGiftReceipt workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftReceipt.xaml">
+                                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoGiftReceipt workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="InvokeMethods\NoGiftReceipt.xaml">
                                                                                               <ui:InvokeWorkflowFile.Arguments>
-                                                                                                <InOutArgument x:TypeArguments="x:Boolean" x:Key="ReceiptEmailCheck">[ReceiptEmailCheck]</InOutArgument>
-                                                                                                <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
+                                                                                                <OutArgument x:TypeArguments="x:Boolean" x:Key="ReceiptEmailCheck">
+                                                                                                  <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ReceiptEmailCheck" />
+                                                                                                </OutArgument>
+                                                                                                <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
+                                                                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;Scenario&quot;).ToString" />
+                                                                                                </InArgument>
                                                                                               </ui:InvokeWorkflowFile.Arguments>
                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">

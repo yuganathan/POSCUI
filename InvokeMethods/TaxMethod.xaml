@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,2010.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816,2010.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NoRedeemCertificates_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,7 +110,7 @@
                               <ui:ImageTarget Image="{x:Null}" Accuracy="0.99" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAANEAAAAhCAYAAABHqE72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAR1SURBVHhe7Zs9axVBFIaPCqLxo9BgkUIbRcSPxiKJSRQVBAk2SQoFKxsRUigiwSJFyD8QFGIQJKB2CYIKKiIkECQmPyOtf2H0uBxmdvNmd3Zm9t6bm1M8ojPnzJx9Z97r3dm9RBsbRlGUQOjPP1CHoih+qIkUJRI1kaJEoiZSlEiCTURUjwsX8DidCNe602pGFNegiiav98SJbI6bN3H/TkZNBFATpUdNBCguQBVqotZTXIMq1ERhJL0n6hahus1E9+7h/laiJvJETdRZqIlaQ1tN9OqVoYEBQ4cOZXnMnj2Gjh83dOeOoU+ftuZInLsx3r3LxjlwwNCxY4Zu3za0tJTPc5mfN3TliqHDh+14CGSiJmru7TU0Pm7o+/d8XixoXl+qavbR+elTOw7i7dutOdIXohXKRaT+kGybiSYns9gyjh41tLCQz5M+EWpmxtC+ffk8pqfH0NxcPpd59izb9MV4RFHkpmtm/co2ZV1k3KpNhSjm1tWZSWGiOlpJX9X1doWJXrzI4nzgT57lZZsr7SzU1FS5IXhD//hhc9+8MbR3L45FuCK3qubTpw2trdncGGTMqk2FcHPr6izEmqiuVtJedb1dYaLLl7M45sEDQ1+/2r7fvw0tLhq6ccPGPHli+6Wtr8/+/eTJbJOvrhr68MHQxYu279Ejmzs8bNvHxgx9+WL7XJDITdb8/r2h8+dt3+yszY1BxquibDOH6Izw3RsyXohW0tZiE21ubv4bD3QE4SsUfwXgON7UqJ/hTxi+z+C4q1dtO//bhQX9+TOfy9+X9+/P+oeGbPuRI1kbi7e+ns9xQSI3XfO3b7bmW7fyfaEU592OMhMJdXRG1DWRUEcrydkVJpKL9eXSJZzL7e7XJpezZ7MY/rSUNsm7ezcfWwSJLLm+hNT8+LGh+/cNPX+O++vizltGlYnq6owI2Rt1tZI8NREAbeZz5wytrOTHdSkzQojIkutLSM2pkXmrrhfhWzPSClF3b4RoJbktNlF77onkYn1BGzLGCK34nyik5tTEzOubi7RCyN64fh33C77zIiR3YgL3C741+9IWE8n9xcgI7i9DhApZ3BT3RE3WnJqYeX1zkVaIU6eyOD4w+PULxzC+8yJkfc+cyQ57UAzjW7MvHXE6xzeKKA4heSGLm/J0romaUxMzr28u0grBD2ZlTD7F/PgRx/nOi3DXd3TU0OfPOM63Zl86/jkR416stIUsbqueEzEhNafGrceHVDoj+Gh6O+1TaRWzvjG0xUQMP1coXtR2pFzcmDcWmq45NW49PqTUGTE9jTd5Sq1i1jeUtpmIefnSUH+/vd/YjtSL+/q1ocHB/PtvCJTbZM2pcevxIbXOCD5Ov3Yte8shZt4yfNe36ljel6QmUpROx30gzi8ho5i6qImUXQGfxhZfzXr4EMfWRU2kdB1VL74yfBye6qcnaiKl66gy0cGD2e/CUG4IaiKl60Am4hM7+SEhf61DeaGoiRQlkv8m+v+HoijhwEZFUfyBjYqi+AMbFUXx44/5CzFDK4qAUgcXAAAAAElFTkSuQmCC" />
                             </ui:WaitImageAppear.Image>
                             <ui:WaitImageAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66d3e7c6-3cba-4d37-b325-92d73992f538" Selector="&lt;ctrl name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66d3e7c6-3cba-4d37-b325-92d73992f538" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>

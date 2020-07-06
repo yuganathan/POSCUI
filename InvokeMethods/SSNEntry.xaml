@@ -112,13 +112,13 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach SSN Screen" sap:VirtualizedContainerService.HintSize="485.6,3801.6" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="4cffa057cc9ab94fad67dcfdddff2be0" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach SSN Screen" sap:VirtualizedContainerService.HintSize="485.6,3739.2" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="4cffa057cc9ab94fad67dcfdddff2be0" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
                       <ui:WindowScope.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,3654.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,3592" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -192,7 +192,7 @@
                                 <ui:ImageTarget Image="{x:Null}" Accuracy="0.99" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAA2CAYAAADEWrcYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVHhe7Zu5TutAFIYjaNgEYl9bXoDtQeAZQEJAxSMADaJGgpq1R4AQu9ilxE6CkBGXJHaSlleYm/GVrTmZE64DtjVOTvEV/POfGcMny4klYrHYFyNUBw0JtUBDQi3QkFALNCTUAg0JtUBDQi3QkFALNCTUAg0JtUBDQinisRgj1IYkRQCSFAFIUgTwLKlgGFXzub3t66yxuAiuqVrSU1NgP+vlhSXa2tCu2Kt0rtbXx3JnZ27PuWa/8SypWCxWTWZ319fZ9+VlcE3Vkj08BPtxjKUltCt2sHO13l5mXl+D3ufWltTzg7qRlJ6cBHs55F9fWaK1VeqLnfJztZ4eZl5dgY55fs60zk7Q84u6kZQ9OAB7iRgLC1JfXBfP1bq7mXl5CdbNiwumdXWBeT/51QcHKx53L/TPxgbaqYTXWafD+amk1MQE2OdjbY2ZNzfuz/l0miVaWsCM2HfOtQWVhIhrtqBSLs76TV1Iyu7vu3sUMhmm9fezt+lpsLcxPw9mxDV+Lr9TJEGlOypoQZyal5QaHwd7fKys/FtraGDm7a2b55NJlmhudufAzOqq/cwRM/5M4s8mpx8kNS8ps7fnzheyWaYPDLhrbzMzYH9jbs5dE/NioQB+DlMQp6YlpcbGwDy/I0CnsRHeTbrOEk1N9po4J8I/dvOP32CfgKlpSd/dRQ7S3TQ7a+di5pLPs+ToqLRH0NS0JHG2aFngLYKI2Mvs7MizArnTU6Z1dEhnBUn9SPKIl+92YYsiSWVgkj7W15l1dwey3MlJaKJIUhmV3nTw55l1fw9yW1R7u3Su39SNpO9mc0dHbu+711H64CCzHh7AWhiiQpGEPqyF7x6FXE5ad177Ox27V/qEVt7DwGb9kMTRh4ZkUcfHgYoKRZL4C3nFywO8Ev/7Q5dTjSSOLerxEXSCFEWSSlQriaMPDzPr6Qn0Pjc3pZ4fkKQSP5HE0UdGmPX8LM36za8kEeFAkiIASYoAJCkCkKQIQJIiAP1XRSRAQ0It0JBQCzQk1AINCbVAQ0It0JBQCzQk1AINCbVAQ0It0JBQCzQk1AINCbVAQ0IdvthfDp0J77l1blkAAAAASUVORK5CYII=" />
                               </ui:ImageFound.Image>
                               <ui:ImageFound.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="905c1b8a-ddad-4fed-b291-7c4c3dc24268" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="905c1b8a-ddad-4fed-b291-7c4c3dc24268" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>
@@ -202,9 +202,9 @@
                                 </ui:Target>
                               </ui:ImageFound.Target>
                             </ui:ImageFound>
-                            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="410.4,604.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="410.4,542.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                               <ui:InterruptibleWhile.Body>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,437.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,375.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -222,7 +222,6 @@
                                       </ui:Target>
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
-                                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
                                   <ui:ImageFound DisplayName="Image " Found="[SSNName]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_2">
                                     <ui:ImageFound.Image>
                                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.99" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAA2CAYAAADEWrcYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMnSURBVHhe7Zu5TutAFIYjaNgEYl9bXoDtQeAZQEJAxSMADaJGgpq1R4AQu9ilxE6CkBGXJHaSlleYm/GVrTmZE64DtjVOTvEV/POfGcMny4klYrHYFyNUBw0JtUBDQi3QkFALNCTUAg0JtUBDQi3QkFALNCTUAg0JtUBDQinisRgj1IYkRQCSFAFIUgTwLKlgGFXzub3t66yxuAiuqVrSU1NgP+vlhSXa2tCu2Kt0rtbXx3JnZ27PuWa/8SypWCxWTWZ319fZ9+VlcE3Vkj08BPtxjKUltCt2sHO13l5mXl+D3ufWltTzg7qRlJ6cBHs55F9fWaK1VeqLnfJztZ4eZl5dgY55fs60zk7Q84u6kZQ9OAB7iRgLC1JfXBfP1bq7mXl5CdbNiwumdXWBeT/51QcHKx53L/TPxgbaqYTXWafD+amk1MQE2OdjbY2ZNzfuz/l0miVaWsCM2HfOtQWVhIhrtqBSLs76TV1Iyu7vu3sUMhmm9fezt+lpsLcxPw9mxDV+Lr9TJEGlOypoQZyal5QaHwd7fKys/FtraGDm7a2b55NJlmhudufAzOqq/cwRM/5M4s8mpx8kNS8ps7fnzheyWaYPDLhrbzMzYH9jbs5dE/NioQB+DlMQp6YlpcbGwDy/I0CnsRHeTbrOEk1N9po4J8I/dvOP32CfgKlpSd/dRQ7S3TQ7a+di5pLPs+ToqLRH0NS0JHG2aFngLYKI2Mvs7MizArnTU6Z1dEhnBUn9SPKIl+92YYsiSWVgkj7W15l1dwey3MlJaKJIUhmV3nTw55l1fw9yW1R7u3Su39SNpO9mc0dHbu+711H64CCzHh7AWhiiQpGEPqyF7x6FXE5ad177Ox27V/qEVt7DwGb9kMTRh4ZkUcfHgYoKRZL4C3nFywO8Ev/7Q5dTjSSOLerxEXSCFEWSSlQriaMPDzPr6Qn0Pjc3pZ4fkKQSP5HE0UdGmPX8LM36za8kEeFAkiIASYoAJCkCkKQIQJIiAP1XRSRAQ0It0JBQCzQk1AINCbVAQ0It0JBQCzQk1AINCbVAQ0It0JBQCzQk1AINCbVAQ0IdvthfDp0J77l1blkAAAAASUVORK5CYII=" />

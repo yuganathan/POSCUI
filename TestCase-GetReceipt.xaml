@@ -60,6 +60,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="838.4,1265.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -78,7 +79,6 @@
         <Variable x:TypeArguments="sd:DataTable" Name="TestDataTable" />
         <Variable x:TypeArguments="x:Boolean" Name="VerifyPOSSalesliplist" />
         <Variable x:TypeArguments="x:Boolean" Name="VerifyPOSSalesSearch" />
-        <Variable x:TypeArguments="x:String" Name="variable2" />
         <Variable x:TypeArguments="x:Boolean" Name="VerifyPOSSaleslipprint" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>

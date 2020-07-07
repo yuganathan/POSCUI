@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>842.4,2187.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816,2187.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TypeLO_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -66,7 +66,7 @@
   </sap:WorkflowViewStateService.ViewState>
   <Sequence DisplayName="Type Source Code LO" sap:VirtualizedContainerService.HintSize="805.6,2022.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="Sale" />
+      <Variable x:TypeArguments="x:String" Name="Options" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -162,7 +162,7 @@
                         </ui:Target>
                       </ui:GetOCRText.Target>
                       <ui:GetOCRText.Text>
-                        <OutArgument x:TypeArguments="x:String">[Sale]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[Options]</OutArgument>
                       </ui:GetOCRText.Text>
                     </ui:GetOCRText>
                     <ui:SetClippingRegion Element="{x:Null}" Region="{x:Null}" Direction="RECTANGLE" DisplayName="Reset clipping region" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="SetClippingRegion_6">
@@ -172,7 +172,7 @@
                     </ui:SetClippingRegion>
                   </Sequence>
                 </Sequence>
-                <If Condition="[Sale.Equals(&quot;Return&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[Options.Equals(&quot;Return&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_2">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="304,255.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <sap:WorkflowViewStateService.ViewState>
@@ -188,7 +188,7 @@
                           <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Sourcecode Entry completed" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Source code Entry completed" />
                     </Sequence>
                   </If.Then>
                   <If.Else>

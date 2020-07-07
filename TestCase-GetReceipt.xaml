@@ -102,7 +102,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,196.4 300,226.4 300.8,226.4 300.8,236.4</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Open CUI App" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="InvokeMethods\OpenAppMenuCheck.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Open CUI App" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="InvokeMethods/OpenAppMenu.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <OutArgument x:TypeArguments="x:Boolean" x:Key="AppMenuCheck">[AppMenuCheck]</OutArgument>
             <InOutArgument x:TypeArguments="x:String" x:Key="Logger" />

@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>828,1430.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,1430.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,7 +60,6 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="838.4,1265.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -151,7 +150,7 @@
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">0,403.6</av:Point>
                             <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">100,456.4 100,486.4 306.4,486.4 306.4,546.4</av:PointCollection>
+                            <av:PointCollection x:Key="ConnectorLocation">100,456.4 100,486.4 313.2,486.4 313.2,546.4</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Transation Search" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="InvokeMethods/SaleSlipInquire.xaml">
@@ -161,12 +160,12 @@
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <FlowStep.Next>
-                          <FlowDecision x:Name="__ReferenceID10" Condition="[VerifyPOSSales]" DisplayName="SalesSlip" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                          <FlowDecision x:Name="__ReferenceID10" Condition="[VerifyPOSSales]" DisplayName="VerifyPOSSales" sap:VirtualizedContainerService.HintSize="84,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">271.2,546.4</av:Point>
-                                <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
-                                <av:PointCollection x:Key="FalseConnector">341.6,590 475.2,590</av:PointCollection>
+                                <av:Size x:Key="ShapeSize">84,87.2</av:Size>
+                                <av:PointCollection x:Key="FalseConnector">355.2,590 475.2,590</av:PointCollection>
                                 <av:PointCollection x:Key="TrueConnector">271.2,590 200,590</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>

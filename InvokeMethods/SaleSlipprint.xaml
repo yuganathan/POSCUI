@@ -81,7 +81,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Sale Slip" sap:VirtualizedContainerService.HintSize="652,1457.6" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="5e88e72db3a69d0e240a9e65a0e86950" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Sale Slip" sap:VirtualizedContainerService.HintSize="652,1457.6" sap2010:WorkflowViewState.IdRef="WindowScope_3" InformativeScreenshot="5e88e72db3a69d0e240a9e65a0e86950" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
             <ui:WindowScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>

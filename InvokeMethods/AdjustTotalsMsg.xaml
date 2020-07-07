@@ -1,15 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ReturnSlip" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AdjustTotalsMsg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ScenarioName" Type="InArgument(x:String)" />
-    <x:Property Name="GiftCardCheck" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="TotalAdjusted" Type="InArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1068,2060.8</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>ReturnSlip_1</sap2010:WorkflowViewState.IdRef>
+  <sap:VirtualizedContainerService.HintSize>1068,860.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AdjustTotalsMsg_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -31,10 +31,10 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -53,24 +53,26 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReturnSlip" sap:VirtualizedContainerService.HintSize="805.6,1896" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AdjustTotalsMsg" sap:VirtualizedContainerService.HintSize="475.2,696" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="GiftCard" />
+      <Variable x:TypeArguments="x:String" Name="PreviousSale" />
+      <Variable x:TypeArguments="ui:UiElement" Name="foundElt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="764,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Verify that Gift Card question is displayed." />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764,1678.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Verify that Return Reason screen is displayed." />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,478.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -78,31 +80,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="727.2,1447.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="798.4,1306.4" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="693.6,1338.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764.8,1197.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Spacebar on Return Slip screen " sap:VirtualizedContainerService.HintSize="652,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key=" " KeyModifiers="None" SpecialKey="False">
-                  <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="256101d2-7dc8-4cf6-bf52-ddf8bbb82035" InformativeScreenshot="915683b280e68991cf82e3a5648122ef" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:SendHotkey.Target>
-                </ui:SendHotkey>
-                <Sequence sap:VirtualizedContainerService.HintSize="652,604.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="723.2,604.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,12 +105,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Gift Card" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+                    <ui:WaitImageAppear DisplayName="Find previous sale" FoundElement="[foundElt]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
                       <ui:WaitImageAppear.Image>
-                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAjCAYAAAB7GINjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARhSURBVHhe7ZrPSxVRFMc1DQQLwTIqI0lwVUG0EBPatG1lWtAmxAh047pVIFFUBKGhgYWCpe5D7Ye4UAJF6QeCP+gXWM37Oe/9CyfOG2533syZmfvuzLOJzuKzOe+ce+6c+537a15FRUUeGEYf0sgwqpBGhlGFNDKMKqSRYVQhjQyjCmlkGFVII8OoQhq9OXfOhMnJJGxvJ8AwjAK/fhnw4UMC7t5Nw4EDOTLOSX9/Bra2EnDhQpb8XYUzZ0wYG0vBxobsy8xMkvQVvH9v+Y6OpsjfoySqWsUJrG9xnR0Ofty4kSkUQBSDYnU1AcePBxfm3TurqIODegN55UoWdnbc+eMioChrFSe0BYRvU1BBBG/eJKGqim5HgDMQvpk6M9DJkyYpHiQOAoq6VnFCW0AvXqT+PPSjRylobJRvzp49eTh1yoTZWatxpKNDf2kKYmhI9uXBgzQcO6b+Fu+GgOJUq6jRFpBYx1+/ThaKQPkcOpSD79+tooyMlG+AFhetvrx96z/bUOyGgOJUq6jRFhAGIXfupMnfBb29Gbh1Kw3XrmVcv+G+QLQjUB1IKtbO2bMmGYeEidVBtBumVu3t7g04hRxImXdgQOY9fdqEqakkfP1qwMePCbh3Lw0NDd4zdlubWZhB1fM6GvBCBNo7Vyr/m4B0a4X9Vd1D+Qno8mX6oIGz8IkTbhH19OjkdTTihQhkAQUj2tWpVSkbcMRLQN3d/mJYWEhCdbXM29pqws+ftC9FpAK6eDFb1DhifzCKMHuRvxWriqiBjoCeP5cb8Pv303DkCL3cYH3RhxLQyopcfvC6BE+6NTXuzXtnp9y8T0zo5nU4eCEaZwEFI2qgIyC8XMVYrF9lJe2DuAdS5hWgWOrqioVg37w/eSJroJ/X4eCF6BQLKBhRAx0Bidjbt/1j3QNZLKCXL5Owf787DqE27yKu9LwOBy9EgqCiUA9GwQKiUYmtrc3D8rL1HJSAXr1Kwr597jg/VPIioQUUdDT9VwT07Fn5BaRzjBexXjNBfX0O5uasGiOUgHZ35nM4eGG/HPNaI3FXj3cN6Dc9HU8BLS1ZsbjR3LuX9gmLSq28LhL99iJ44y76L4hKQGXfA9mv5x8+TMHRo3Jzhgmbm3Pw9Kn0uXnT/yH+loAeP5Z9xP42NdGnjTD41QpvpvFbnv00dOmSPA1RpzBcjrq6srC+bj33ly8GfPokB1zEijgdAZX9FFbK/cTnzwYcPuzuQFT3MWEEhEfZHz/o/PbBCEMptZqfL76PCYrFG2X0cQ9kOAGV/R4IUbkh/fbN8PzCHgcBIVevZkkRRSUgRKVWa2sJcgbs66PrtLmZKAw0+kQtIOT69TLeRAvkNxrZGCbF6XV4OAUtLd5LQlwEhGCu8fFUYVBE/igFhHjVSnyTOnjQu1bnz5uFfSTGIvgPBPuyUg4BITi7OftMoS0ghimGNDKMKqSRYVQhjQyjCmlkGFVII8OoQhoZRhXSyDCqkEaGUSEPvwH5FNeL/YpqxAAAAABJRU5ErkJggg==" />
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                       </ui:WaitImageAppear.Image>
                       <ui:WaitImageAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a57c0c27-154a-45d2-84fd-f7463e1242e7" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="14d95360-e844-4a48-8fca-36b63bb8d2ae" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -130,7 +120,7 @@
                         </ui:Target>
                       </ui:WaitImageAppear.Target>
                     </ui:WaitImageAppear>
-                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Gift Card" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
+                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get previous sale" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
                       <ui:GetOCRText.OCREngine>
                         <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                           <ActivityFunc.Argument>
@@ -151,7 +141,7 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="fe5685b4-886a-4b1a-adb5-05b6f43a54e9" InformativeScreenshot="ebb76508ba3999b8a2e8f9d947d2e31a">
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[foundElt]" Id="e0ca2a0f-a23c-402d-893f-13d364855a77" InformativeScreenshot="ef9a200fc6d0966e88d385653b010ae1">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -161,29 +151,40 @@
                         </ui:Target>
                       </ui:GetOCRText.Target>
                       <ui:GetOCRText.Text>
-                        <OutArgument x:TypeArguments="x:String">[GiftCard]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[PreviousSale]</OutArgument>
                       </ui:GetOCRText.Text>
                     </ui:GetOCRText>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[GiftCard]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[PreviousSale]" />
                   </Sequence>
                 </Sequence>
-                <If Condition="[GiftCard.Contains(&quot;Gift Card&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[PreviousSale.Contains(&quot;previous sale&quot;)]" sap:VirtualizedContainerService.HintSize="723.2,460" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="304,255.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,310.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Enter" sap:VirtualizedContainerService.HintSize="333.6,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46d1e2f2-17b1-4d21-8904-77e708b8d45b" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                      <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[GiftCardCheck]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Boolean">[TotalAdjusted]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Gift Card question is displayed." />
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -195,13 +196,13 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[GiftCardCheck]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Boolean">[TotalAdjusted]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Throw Exception="[new Exception(&quot;Gift Card question is not displayed.&quot;)]" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      <Throw Exception="[new Exception(&quot;Total adjustment message is not shown&quot;)]" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                     </Sequence>
                   </If.Else>
                 </If>
@@ -217,10 +218,10 @@
         </ui:WindowScope>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="730.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,313.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -245,6 +246,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="764,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Orientation="Window" Status="PASSED" />
+    <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Orientation="Window" Status="PASSED" />
   </Sequence>
 </Activity>

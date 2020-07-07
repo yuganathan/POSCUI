@@ -85,6 +85,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="GiftCardCheck" />
       <Variable x:TypeArguments="x:Boolean" Name="LastNameCheck" />
       <Variable x:TypeArguments="x:Boolean" Name="DownpaymentCheck" />
+      <Variable x:TypeArguments="x:Boolean" Name="TaxCheck" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -274,10 +275,15 @@
                                                     <av:PointCollection x:Key="ConnectorLocation">220,1456.4 220,1486.4 180,1486.4 180,1523.6</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CompletePromoCard workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="InvokeMethods\CompletePromoCard.xaml">
+                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CompletePromoCard workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="InvokeMethods\PromoCardEntry.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="RedeemCertificateCheck">[RedeemCertificateCheck]</InOutArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
+                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;Scenario&quot;).ToString" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="Promocode">
+                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;PromoCard&quot;).ToString" />
+                                                    </InArgument>
+                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="RedeemCheck" />
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -296,9 +302,12 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke redeem workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="InvokeMethods/RedeemCertificates.xaml">
                                                       <ui:InvokeWorkflowFile.Arguments>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
-                                                        <OutArgument x:TypeArguments="x:Boolean" x:Key="DownpaymentCheck">[DownpaymentCheck]</OutArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+                                                        <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
+                                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;Scenario&quot;).ToString" />
+                                                        </InArgument>
+                                                        <OutArgument x:TypeArguments="x:Boolean" x:Key="TaxCheck">
+                                                          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="TaxCheck" />
+                                                        </OutArgument>
                                                       </ui:InvokeWorkflowFile.Arguments>
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -307,7 +316,7 @@
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </ui:InvokeWorkflowFile>
                                                     <FlowStep.Next>
-                                                      <FlowDecision x:Name="__ReferenceID10" Condition="[DownpaymentCheck]" DisplayName="Certificates" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
+                                                      <FlowDecision x:Name="__ReferenceID10" Condition="[TaxCheck]" DisplayName="TaxCheck" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -481,7 +490,7 @@
                                                                                                         <av:PointCollection x:Key="ConnectorLocation">220,2486.4 220,2516.4 389.6,2516.4 389.6,2466.4 454.8,2466.4 454.8,2496.4</av:PointCollection>
                                                                                                       </scg:Dictionary>
                                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoEmailReceipt workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods/EmailReceipt.xaml">
+                                                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoEmailReceipt workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InvokeMethods\EmailReceipt.xaml">
                                                                                                       <ui:InvokeWorkflowFile.Arguments>
                                                                                                         <InOutArgument x:TypeArguments="x:Boolean" x:Key="GiftCardCheck">[GiftCardCheck]</InOutArgument>
                                                                                                         <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
@@ -512,10 +521,14 @@
                                                                                                                 <av:PointCollection x:Key="ConnectorLocation">220,2626.4 220,2656.4 389.6,2656.4 389.6,2596.4 450,2596.4 450,2626.4</av:PointCollection>
                                                                                                               </scg:Dictionary>
                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoGiftCard workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="InvokeMethods/GiftCard.xaml">
+                                                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NoGiftCard workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="InvokeMethods\GiftCard.xaml">
                                                                                                               <ui:InvokeWorkflowFile.Arguments>
-                                                                                                                <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">[POSMenuCheck]</InOutArgument>
-                                                                                                                <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestData("Scenario").ToString]</InArgument>
+                                                                                                                <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">
+                                                                                                                  <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="POSMenuCheck" />
+                                                                                                                </InOutArgument>
+                                                                                                                <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
+                                                                                                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestData(&quot;Scenario&quot;).ToString" />
+                                                                                                                </InArgument>
                                                                                                               </ui:InvokeWorkflowFile.Arguments>
                                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -524,7 +537,7 @@
                                                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                                                             </ui:InvokeWorkflowFile>
                                                                                                             <FlowStep.Next>
-                                                                                                              <FlowDecision x:Name="__ReferenceID35" Condition="[POSMenuCheck]" DisplayName="POSMenu" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
+                                                                                                              <FlowDecision x:Name="__ReferenceID35" Condition="[POSMenuCheck]" DisplayName="GiftCard" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -734,7 +747,7 @@
                                                                 <av:Size x:Key="ShapeSize">229.6,62.4</av:Size>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="Redeem Certificaties question not shown">
+                                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;Redeem Certificaties question not shown&quot;+TaxCheck.ToString]">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,2515.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,2319.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CashTenders_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,10 +58,9 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CashTenders" sap:VirtualizedContainerService.HintSize="805.6,2350.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CashTenders" sap:VirtualizedContainerService.HintSize="805.6,2154.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Tenders" />
       <Variable x:TypeArguments="x:String" Name="Credit" />
@@ -73,7 +72,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="764,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Check Tender Options" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764,2132.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764,1936.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -81,20 +80,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="727.2,1901.6" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="727.2,1705.6" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="693.6,1792.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="693.6,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="652,1255.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="652,1059.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,21 +173,6 @@
                     </ui:SendHotkey.Target>
                   </ui:SendHotkey>
                   <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey Enter" sap:VirtualizedContainerService.HintSize="375.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
-                    <ui:SendHotkey.Target>
-                      <ui:Target Element="{x:Null}" Id="9dc107f4-a6e4-429b-ab8e-359e362ff678" InformativeScreenshot="8f91091f6b6c3f7c6955290dddae8d2a" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
-                        <ui:Target.ClippingRegion>
-                          <ui:Region Rectangle="123, 432, 67, 23" />
-                        </ui:Target.ClippingRegion>
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:SendHotkey.Target>
-                  </ui:SendHotkey>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey Enter" sap:VirtualizedContainerService.HintSize="375.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target Element="{x:Null}" Id="9dc107f4-a6e4-429b-ab8e-359e362ff678" InformativeScreenshot="8f91091f6b6c3f7c6955290dddae8d2a" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
                         <ui:Target.ClippingRegion>

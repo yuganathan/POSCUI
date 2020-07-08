@@ -1,0 +1,116 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PromoMessageCheck" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="816,1107.2" sap2010:WorkflowViewState.IdRef="PromoMessageCheck_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PromoMessageCheck" sap:VirtualizedContainerService.HintSize="765.6,942.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - POS" sap:VirtualizedContainerService.HintSize="724,849.6" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="0b71267f095135ab9270f020c3c2e302" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="690.4,702.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="PromoMsg" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ImageFound DisplayName="Image Exists Promo Message" Found="[PromoMsg]" sap:VirtualizedContainerService.HintSize="648.8,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+              <ui:ImageFound.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+              </ui:ImageFound.Image>
+              <ui:ImageFound.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2157827-270b-411a-b792-b2ed46c926c8" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ImageFound.Target>
+            </ui:ImageFound>
+            <If Condition="[PromoMsg=True]" sap:VirtualizedContainerService.HintSize="648.8,462.4" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,312.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="333.6,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="422eefb6-ec72-4383-beaf-4bd990a58c57" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Promo Message Popup shown and enter is clicked" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Promo Message Popup not shown" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>

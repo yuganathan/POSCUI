@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1463,1033" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="816,1419.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="22">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -23,6 +23,7 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -51,18 +52,19 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="631,868" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="821.6,1254.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="TestDataTable" />
       <Variable x:TypeArguments="x:String" Name="Type" />
-      <Variable x:TypeArguments="x:String" Name="ReceiptId">
+      <Variable x:TypeArguments="x:String" Name="SlipNumber">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">39769</Literal>
+          <Literal x:TypeArguments="x:String">39779</Literal>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Default="070720" Name="ReceiptDate" />
+      <Variable x:TypeArguments="x:String" Name="SlipDate" />
       <Variable x:TypeArguments="x:Boolean" Name="POSMenuCheck" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -70,29 +72,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ReadTestData workflow" sap:VirtualizedContainerService.HintSize="589,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InvokeMethods\DeleteFiles.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ReadTestData workflow" sap:VirtualizedContainerService.HintSize="780,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InvokeMethods\DeleteFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ReadTestData workflow" sap:VirtualizedContainerService.HintSize="589,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="ReadTestData.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ReadTestData workflow" sap:VirtualizedContainerService.HintSize="780,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="ReadTestData.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="POSDT">[TestDataTable]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[TestDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="589,522" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[TestDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="780,905.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="539,374" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="730.4,756.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="688.8,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Type]</OutArgument>
               </Assign.To>
@@ -100,11 +102,11 @@
                 <InArgument x:TypeArguments="x:String">[row.Item("Type").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Type]" sap:VirtualizedContainerService.HintSize="497,182" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Type]" sap:VirtualizedContainerService.HintSize="688.8,564" sap2010:WorkflowViewState.IdRef="Switch`1_2">
               <Switch.Default>
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Test case does not fall under Sale/Return/Exchange category" />
               </Switch.Default>
-              <Sequence x:Key="Sale" sap:VirtualizedContainerService.HintSize="649,562" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence x:Key="Sale" sap:VirtualizedContainerService.HintSize="648.8,560.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -121,9 +123,15 @@
                   <If.Then>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="TestCase-GetReceipt.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptId" />
-                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptDate" />
-                        <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">[row]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptId">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SlipNumber" />
+                        </OutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptDate">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SlipDate" />
+                        </OutArgument>
+                        <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">
+                          <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="row" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>
@@ -132,13 +140,13 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence x:Key="Return" sap:VirtualizedContainerService.HintSize="651,297" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence x:Key="Return" sap:VirtualizedContainerService.HintSize="648.8,330.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[Not String.IsNullOrEmpty(ReceiptId) AND Not String.IsNullOrEmpty(ReceiptDate)]" sap:VirtualizedContainerService.HintSize="609,236" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[(SlipDate.Length&lt;&gt;0) AND (SlipNumber.Length&lt;&gt;0)]" sap:VirtualizedContainerService.HintSize="607.2,237.6" sap2010:WorkflowViewState.IdRef="If_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -149,8 +157,8 @@
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TestCase-Return workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="TestCase-Return.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">[row]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ReceiptId">[ReceiptId]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ReceiptDate">[ReceiptDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="ReceiptId">[SlipNumber]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="ReceiptDate">[SlipDate]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>
@@ -159,7 +167,7 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="&quot;Exchange&quot;" DisplayName="Invoke TestCase-Exchange workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TestCase-Exchange.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="&quot;Exchange&quot;" DisplayName="Invoke TestCase-Exchange workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TestCase-Exchange.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">[row]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>

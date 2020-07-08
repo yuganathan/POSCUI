@@ -4,11 +4,12 @@
     <x:Property Name="TaxingCheck" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="ReceiptId" Type="InArgument(x:String)" />
     <x:Property Name="ReceiptDate" Type="InArgument(x:String)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>816,6032</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,6075.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ReturnProcess_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -63,7 +64,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReturnProcess" sap:VirtualizedContainerService.HintSize="772,5867.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReturnProcess" sap:VirtualizedContainerService.HintSize="772,5910.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ReturnText" />
       <Variable x:TypeArguments="x:String" Name="Adjust" />
@@ -71,6 +72,7 @@
       <Variable x:TypeArguments="x:String" Name="AnotherSlip" />
       <Variable x:TypeArguments="x:String" Name="Taxing" />
       <Variable x:TypeArguments="ui:UiElement" Name="foundElt" />
+      <Variable x:TypeArguments="x:Boolean" Name="ImageExist" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -78,7 +80,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="730.4,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Verify Method of Taxing is displayed." />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="730.4,5649.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="730.4,5692.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -86,25 +88,25 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="693.6,5418.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="693.6,5461.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach PoS Window" sap:VirtualizedContainerService.HintSize="652,4880.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="cfc6be54b06b0057a70a00ef963bc69a" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach PoS Window" sap:VirtualizedContainerService.HintSize="652,4924" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="cfc6be54b06b0057a70a00ef963bc69a" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
             <ui:WindowScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="586.4,4733.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="586.4,4776.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544.8,4640.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544.8,4684" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,31 +247,45 @@
                         <OutArgument x:TypeArguments="x:String">[Adjust]</OutArgument>
                       </ui:GetOCRText.Text>
                     </ui:GetOCRText>
+                    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="503.2,542.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,375.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type " sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="%[k(down)]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="14620dc3-223e-4f67-8acd-8361fc978b59" InformativeScreenshot="76177389bc15df2f51a07873cd967b96" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:ImageFound DisplayName="Image " Found="[ImageExist]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_8">
+                            <ui:ImageFound.Image>
+                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.99" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                            </ui:ImageFound.Image>
+                            <ui:ImageFound.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="905c1b8a-ddad-4fed-b291-7c4c3dc24268" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;" TimeoutMS="2000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:ImageFound.Target>
+                          </ui:ImageFound>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                      <ui:InterruptibleDoWhile.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not ImageExist" />
+                      </ui:InterruptibleDoWhile.Condition>
+                    </ui:InterruptibleDoWhile>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="503.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Adjust]" />
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send down key to choose return reason" sap:VirtualizedContainerService.HintSize="503.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="down" KeyModifiers="None" SpecialKey="True">
-                      <ui:SendHotkey.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8e91773b-d895-435e-99b5-f1b43a4d6fe2" InformativeScreenshot="29449a047e107b21b960748aabb01ff1" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:SendHotkey.Target>
-                    </ui:SendHotkey>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send down key" sap:VirtualizedContainerService.HintSize="503.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SpecialKey="True">
-                      <ui:SendHotkey.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="457efda3-3fae-442c-b9da-db02e9372dcb" InformativeScreenshot="23460a7dd71879e1f8a24d1087105134" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:SendHotkey.Target>
-                    </ui:SendHotkey>
                     <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Enter to choose return reason" sap:VirtualizedContainerService.HintSize="503.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d945c38b-9b78-4d53-828c-e671a4900be3" InformativeScreenshot="2f2975414029ba7a2d58da79c5f5c38b" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
@@ -294,21 +310,6 @@
                         </ui:Target>
                       </ui:SendHotkey.Target>
                     </ui:SendHotkey>
-                    <ui:ImageFound DisplayName="Image Exists Asterisk" Found="[Asterisk]" sap:VirtualizedContainerService.HintSize="503.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
-                      <ui:ImageFound.Image>
-                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAfCAYAAAAIjIbwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEiSURBVEhL7dMhSwNhGMDxV9A8sAxMwlh23TCDGuyCKwYZ6yIGGUaDNqM2i0UwDQcr4hYU4T6HYee+wvl/t2f6cD7ce9OZvPALz/Hc//buNufcKJk/8+JvqSFy7sd0p4gGond4EsdyzaA74WgXkTiVawbd+R7dxR4W5QYruopLVGXOjC6z0IcP3GMDOnqOI7zKfI1gtC3Ls9hEZvSAhYG6IeQKFWRG/VH8V3CC6REtD9iGHD0cXcI+sj5xBztYgBWt1+Ov6DoL/gVZIcstakhH4/gtKZffJ9ELdUNeW0hHm83h5xCtsPAsy49ooCez5x96iBeZb2AdXw/jhRb8iyrJDdaP3z/8DGsyB6Npc/mbpv1JNCfdKaJFVFjLeenOv46Okg8tAQvm7zpgAwAAAABJRU5ErkJggg==" />
-                      </ui:ImageFound.Image>
-                      <ui:ImageFound.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="41665e11-5542-402f-ae96-b44025e74579" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:ImageFound.Target>
-                    </ui:ImageFound>
                     <If Condition="[Asterisk]" sap:VirtualizedContainerService.HintSize="503.2,212" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Item is selected for return" />
@@ -390,8 +391,8 @@
                         <OutArgument x:TypeArguments="x:String">[AnotherSlip]</OutArgument>
                       </ui:GetOCRText.Text>
                     </ui:GetOCRText>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[AnotherSlip]" />
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Type into Another slip involved question" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="N[k(enter)]">
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="503.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[AnotherSlip]" />
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Type into Another slip involved question" EmptyField="False" sap:VirtualizedContainerService.HintSize="503.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="N[k(enter)]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c852a6-50c9-4510-9807-9505a11b2d00" InformativeScreenshot="1d5611f10edef366e7fa778c855cc777" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -403,7 +404,7 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send tab" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="tab" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send tab" sap:VirtualizedContainerService.HintSize="503.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="tab" KeyModifiers="None" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5d4e4ff3-98ce-4ac1-9d95-0d5190bd85d8" InformativeScreenshot="05c1108399d18acd15c3bbe8ca6e54f8" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
                           <ui:Target.TimeoutMS>

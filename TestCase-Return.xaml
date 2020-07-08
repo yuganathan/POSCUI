@@ -90,6 +90,7 @@
         <Variable x:TypeArguments="x:Boolean" Name="ItemEntryCheck" />
         <Variable x:TypeArguments="x:Int32" Name="TaxMethodComplete" />
         <Variable x:TypeArguments="x:Boolean" Name="TenderCheck" />
+        <Variable x:TypeArguments="x:Boolean" Name="ReceiptEmailCheck" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -252,12 +253,8 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ChooseReturn workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="InvokeMethods\ChooseReturn.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                    </InArgument>
-                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingChargeCheck">
-                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="RevolvingChargeCheck" />
-                                                    </OutArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="RevolvingChargeCheck">[RevolvingChargeCheck]</OutArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -345,27 +342,13 @@
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SSNEntry workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="InvokeMethods\SSNEntry.xaml">
                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="SSNNo">
-                                                                              <Literal x:TypeArguments="x:String">1234</Literal>
-                                                                            </InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="DateMonth">
-                                                                              <Literal x:TypeArguments="x:String">0101</Literal>
-                                                                            </InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="ZipCode">
-                                                                              <Literal x:TypeArguments="x:String">44333</Literal>
-                                                                            </InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).toString" />
-                                                                            </InArgument>
-                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="ItemEntryCheck">
-                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ItemEntryCheck" />
-                                                                            </OutArgument>
-                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="ReturnSlipCheck">
-                                                                              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ReturnSlipCheck" />
-                                                                            </OutArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="Type">
-                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Type&quot;).toString" />
-                                                                            </InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="SSNNo">1234</InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="DateMonth">0101</InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="ZipCode">44333</InArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").toString]</InArgument>
+                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="ItemEntryCheck">[ItemEntryCheck]</OutArgument>
+                                                                            <OutArgument x:TypeArguments="x:Boolean" x:Key="ReturnSlipCheck">[ReturnSlipCheck]</OutArgument>
+                                                                            <InArgument x:TypeArguments="x:String" x:Key="Type">[TestDataRow.Item("Type").toString]</InArgument>
                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -374,10 +357,7 @@
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </ui:InvokeWorkflowFile>
                                                                         <FlowStep.Next>
-                                                                          <FlowDecision x:Name="__ReferenceID0" DisplayName="ReturnSlip" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
-                                                                            <FlowDecision.Condition>
-                                                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ReturnSlipCheck" />
-                                                                            </FlowDecision.Condition>
+                                                                          <FlowDecision x:Name="__ReferenceID0" Condition="[ReturnSlipCheck]" DisplayName="ReturnSlip" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -431,12 +411,8 @@
                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TaxMethod workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="InvokeMethods\TaxMethod.xaml">
                                                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                            </InArgument>
-                                                                                            <OutArgument x:TypeArguments="x:Int32" x:Key="TaxMethodComplete">
-                                                                                              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="TaxMethodComplete" />
-                                                                                            </OutArgument>
+                                                                                            <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                                            <OutArgument x:TypeArguments="x:Int32" x:Key="TaxMethodComplete">[TaxMethodComplete]</OutArgument>
                                                                                           </ui:InvokeWorkflowFile.Arguments>
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -464,12 +440,8 @@
                                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke EnterTender workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="InvokeMethods\EnterTender.xaml">
                                                                                                 <ui:InvokeWorkflowFile.Arguments>
-                                                                                                  <InOutArgument x:TypeArguments="x:Boolean" x:Key="TendersCheck">
-                                                                                                    <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="TenderCheck" />
-                                                                                                  </InOutArgument>
-                                                                                                  <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                                                  </InArgument>
+                                                                                                  <InOutArgument x:TypeArguments="x:Boolean" x:Key="TendersCheck">[TenderCheck]</InOutArgument>
+                                                                                                  <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
                                                                                                 </ui:InvokeWorkflowFile.Arguments>
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -478,10 +450,7 @@
                                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                               </ui:InvokeWorkflowFile>
                                                                                               <FlowStep.Next>
-                                                                                                <FlowDecision x:Name="__ReferenceID44" DisplayName="TenderCheck" sap:VirtualizedContainerService.HintSize="72.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
-                                                                                                  <FlowDecision.Condition>
-                                                                                                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TenderCheck" />
-                                                                                                  </FlowDecision.Condition>
+                                                                                                <FlowDecision x:Name="__ReferenceID44" Condition="[TenderCheck]" DisplayName="TenderCheck" sap:VirtualizedContainerService.HintSize="72.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -508,6 +477,12 @@
                                                                                                           <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
                                                                                                             <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
                                                                                                           </InArgument>
+                                                                                                          <InArgument x:TypeArguments="x:String" x:Key="Type">
+                                                                                                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Type&quot;).ToString" />
+                                                                                                          </InArgument>
+                                                                                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="ReceiptEmailCheck">
+                                                                                                            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ReceiptEmailCheck" />
+                                                                                                          </OutArgument>
                                                                                                         </ui:InvokeWorkflowFile.Arguments>
                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -780,24 +755,12 @@
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CustomerSearch workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="InvokeMethods\CustomerSearch.xaml">
                                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="LastName">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;LastName&quot;).ToString" />
-                                                                    </InArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Scenario&quot;).ToString" />
-                                                                    </InArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="RevCharge">
-                                                                      <Literal x:TypeArguments="x:String">N</Literal>
-                                                                    </InArgument>
-                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ItemEntryCheck">
-                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ItemEntryCheck" />
-                                                                    </OutArgument>
-                                                                    <InArgument x:TypeArguments="x:String" x:Key="Type">
-                                                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataRow.Item(&quot;Type&quot;).ToString" />
-                                                                    </InArgument>
-                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ReturnSlipCheck">
-                                                                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="ReturnSlipCheck" />
-                                                                    </OutArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="LastName">[TestDataRow.Item("LastName").ToString]</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[TestDataRow.Item("Scenario").ToString]</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="RevCharge">N</InArgument>
+                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ItemEntryCheck">[ItemEntryCheck]</OutArgument>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="Type">[TestDataRow.Item("Type").ToString]</InArgument>
+                                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ReturnSlipCheck">[ReturnSlipCheck]</OutArgument>
                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">

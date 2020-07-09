@@ -70,6 +70,11 @@
       <Variable x:TypeArguments="x:String" Name="ReceiptEmail" />
       <Variable x:TypeArguments="x:Boolean" Name="PreviousReturnCheck" />
       <Variable x:TypeArguments="x:Boolean" Name="ESPJRP" />
+      <Variable x:TypeArguments="x:Int32" Name="Timeout">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="4000" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -157,10 +162,7 @@
                     <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
                   </ui:ImageFound.Image>
                   <ui:ImageFound.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="473567bd-a1f0-4c08-9d3a-106bb98bf74a" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="473567bd-a1f0-4c08-9d3a-106bb98bf74a" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;" TimeoutMS="[Timeout]">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -188,9 +190,7 @@
                 </If>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AdjustTotalsMsg workflow" sap:VirtualizedContainerService.HintSize="1432.8,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InvokeMethods\AdjustTotalsMsg.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ScenarioName" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ScenarioName">[ScenarioName]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <If Condition="[Type.Equals(&quot;Sale&quot;)]" sap:VirtualizedContainerService.HintSize="1432.8,1061.6" sap2010:WorkflowViewState.IdRef="If_2">

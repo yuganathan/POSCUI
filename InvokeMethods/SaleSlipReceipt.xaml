@@ -64,6 +64,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>ActiproSoftware.Shared.Wpf</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SaleSlipInquire" sap:VirtualizedContainerService.HintSize="772,4584" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -139,13 +141,13 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Date" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_31">
+                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR " sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_41">
                                   <ui:GetOCRText.OCREngine>
                                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                                       <ActivityFunc.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                       </ActivityFunc.Argument>
-                                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_31" Image="[Image]" Invert="True" Language="eng" Profile="Screen" Scale="3">
+                                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_41" Image="[Image]" Invert="True" Language="eng" Profile="Screen" Scale="3">
                                         <ui:GoogleOCR.AllowedCharacters>
                                           <InArgument x:TypeArguments="x:String">
                                             <Literal x:TypeArguments="x:String" Value="" />
@@ -160,9 +162,9 @@
                                     </ActivityFunc>
                                   </ui:GetOCRText.OCREngine>
                                   <ui:GetOCRText.Target>
-                                    <ui:Target Element="{x:Null}" Id="c9f08364-195f-4432-8eb5-b2e64cdbea09" InformativeScreenshot="8e8c1e4ad66c1eac04b44716bad513ed" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
+                                    <ui:Target Element="{x:Null}" Id="3c19e5d8-6c92-4c8e-8bda-5fe372459fe7" InformativeScreenshot="d6a5dab1e6a7b6c16281ad1722e870fc" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
                                       <ui:Target.ClippingRegion>
-                                        <ui:Region Rectangle="188, 107, 108, 31" />
+                                        <ui:Region Rectangle="198, 107, 104, 30" />
                                       </ui:Target.ClippingRegion>
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
@@ -250,13 +252,18 @@
                                     <OutArgument x:TypeArguments="x:String">[LocalCustomer]</OutArgument>
                                   </ui:GetOCRText.Text>
                                 </ui:GetOCRText>
-                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="GetId" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_37">
+                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text " sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_42">
                                   <ui:GetOCRText.OCREngine>
                                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                                       <ActivityFunc.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                       </ActivityFunc.Argument>
-                                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="0123456789" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_37" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="3">
+                                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GoogleOCR_42" Image="[Image]" Invert="True" Language="eng" Profile="Screen" Scale="3">
+                                        <ui:GoogleOCR.AllowedCharacters>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" Value="" />
+                                          </InArgument>
+                                        </ui:GoogleOCR.AllowedCharacters>
                                         <ui:GoogleOCR.DeniedCharacters>
                                           <InArgument x:TypeArguments="x:String">
                                             <Literal x:TypeArguments="x:String" Value="" />
@@ -266,9 +273,9 @@
                                     </ActivityFunc>
                                   </ui:GetOCRText.OCREngine>
                                   <ui:GetOCRText.Target>
-                                    <ui:Target Element="{x:Null}" Id="d4331b15-056f-454c-b430-6f0e95c11332" InformativeScreenshot="55b766fe006786d1a33696c77f0bbc07" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
+                                    <ui:Target Element="{x:Null}" Id="8757c4cc-33ff-48f2-9346-15e665556dfb" InformativeScreenshot="9f1084dfab88ffcc3dc1e33365c30c6e" Selector="&lt;ctrl name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
                                       <ui:Target.ClippingRegion>
-                                        <ui:Region Rectangle="331, 40, 92, 31" />
+                                        <ui:Region Rectangle="380, 133, 78, 26" />
                                       </ui:Target.ClippingRegion>
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EnterItemEntryScreen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EnterItemEntryScreen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IssueDiamondBondCheck" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="SKU" Type="InArgument(x:String)" />
@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,2980</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816,2980</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EnterItemEntryScreen_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -32,10 +32,10 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -59,11 +59,12 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="EnterItemEntryScreen" sap:VirtualizedContainerService.HintSize="805.6,2815.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="IssueDiamondBond" />
+      <Variable x:TypeArguments="ui:UiElement" Name="foundElt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -174,7 +175,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_4">
+                    <ui:WaitImageAppear DisplayName="Find Image" FoundElement="[foundElt]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_4">
                       <ui:WaitImageAppear.Image>
                         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                       </ui:WaitImageAppear.Image>
@@ -210,7 +211,7 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dbc1010f-576d-400b-8ac6-fe40e2ac409a" InformativeScreenshot="db339b71d33b5bbe8c4d7a3e7bcef965">
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[foundElt]" Id="dbc1010f-576d-400b-8ac6-fe40e2ac409a" InformativeScreenshot="db339b71d33b5bbe8c4d7a3e7bcef965">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

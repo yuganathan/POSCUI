@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NoDiamondBond" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NoDiamondBond" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ESPCheck" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="DiamondBond" Type="InArgument(x:String)" />
@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,1960</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816,1960</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NoDiamondBond_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -32,10 +32,10 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -58,11 +58,12 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="No Dimaond Bond" sap:VirtualizedContainerService.HintSize="805.6,1795.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ESP" />
+      <Variable x:TypeArguments="ui:UiElement" Name="foundElt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -120,7 +121,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+                    <ui:WaitImageAppear DisplayName="Find Image" FoundElement="[foundElt]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
                       <ui:WaitImageAppear.Image>
                         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAnCAYAAAC/mE48AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKhSURBVGhD7ZhNi3FhGMcpDY0xKaIoS2bKBgsrViQsRpLMYprN1CzEN7AUH8DGUvIJRMmCWIgYsZWFt89xPd2n7rtznMvL83jqzMw5i1/puv//c+XvfjtUh8MB5IwSAFaUE0oAWFFOKAFgRTmhBIAV5YQSAFaUE0oAWPEaVCrVX+HxeETPaLVaEA6H4fHxkenUajVYrVZ4f3+H5XIp8vCfeQzxWiwWSKfTMB6PRV4MyQKoVCqg0WhQLcVut8NoNBL4MB2G0WiEdrst8GJIEkCv14O7uztUd4zb7YbtdvtPfW02G6xWK+bFuDmAj48PdPwcqVSK+cnnyWTCxna7HXQ6HS4wqiGzhY7TGtaXeLvdLni9XqYrFosiHR9JAiBrnHifnp4Evy6f+XwOWq2W0728vLD6NX0XiwXzRqNRVEORJAC69l9fX9FxSqFQgM/PTyiVSqx2bV+n08np/H4/Ok6RdAY8Pz9z0xbTnOKavvwZEI/HUQ3l2+0BlzjXl+4BPp+P6crlskjH5+YALtFsNkXec6cAOcvNZjMkk0kYDAYiL+Y5hcPhgPV6LXoGH0kCIFxzD7i/v4dGoyHwYToMk8nEzQa+F0OyAAjkJhgKhcBgMKBewsPDA3x9fTEPpqHQm2Amk4HpdCrodQpJ9oBzkHVMpn4sFmM98vk8G//ffSUJIJvNcsdbtVpFxwmbzYb7NUmPQCDA6r8iAHLHJ16Xy3XyIsQPIBgMsvotfTEkCeDt7Y35yW7Pf3Pb7/cwHA4FSyCXy7FxWvs2AVwL/2WIfGGyuWG6Y/R6PcxmM1HfHx0AoVarXXwj1Ol0UK/XBT469uMDIJBzOhKJiP4QIWd4IpGAfr8v8lCd5AH8FpQAsKKcUALAinJCCQArygklAKwoHw7wB/7uEG2hFdLdAAAAAElFTkSuQmCC" />
                       </ui:WaitImageAppear.Image>
@@ -156,7 +157,7 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c33f0128-ccc9-4b1a-a613-af1bcfdaffad" InformativeScreenshot="ccd0825e21b0d1eacf1b46d13e99ab7a">
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[foundElt]" Id="c33f0128-ccc9-4b1a-a613-af1bcfdaffad" InformativeScreenshot="ccd0825e21b0d1eacf1b46d13e99ab7a">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

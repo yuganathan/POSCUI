@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="NoEmailReceipt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="NoEmailReceipt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="GiftCardCheck" Type="InOutArgument(x:Boolean)" />
     <x:Property Name="ScenarioName" Type="InArgument(x:String)" />
@@ -6,10 +6,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,2298.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816,2298.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NoEmailReceipt_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -31,10 +31,10 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -58,11 +58,12 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="NoEmailReceipt" sap:VirtualizedContainerService.HintSize="805.6,2133.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="GiftCard" />
+      <Variable x:TypeArguments="ui:UiElement" Name="foundElt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -125,7 +126,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+                    <ui:WaitImageAppear DisplayName="Find Image" FoundElement="[foundElt]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
                       <ui:WaitImageAppear.Image>
                         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJEAAAAgCAYAAAASTprzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQ+SURBVHhe7ZrLS9xQFMattSDUIlgrWkuLgqsqlC7ECm7cduUT3JSiCLpx7aogomgpSBUtqCjU1158teKiRbBUfCD4oFXBRybzyMy/cNoz4TYZc5LJTTLTlN7Fb3Pnnpyb7365OfdmMjIyYiAQuINsFAh4IBsFAh7IRoGAB7JRIOCBbBQIeCAbzXnxQoG5ORlOTgIgSVKc62sJdncD0N8fgvv3o2TcTbq6wnB8HIDa2gj5ux2ePVNgaioIh4faWJaWZLIvY2dH7Ts+HiR/9xKvtPITqK9RZ12HZLS3h+MiMEEovn8PwOPHycXZ3FSFff/e2WQ2N0fg4sKY3y8m8lIrP+HKRPhUJROF8emTDLdv09dh4EqET6iTlejpU4U0EOIHE3mtlZ9wZaLZ2eCfGx8aCkJxsfYEZWbGoLxcgeVlNQFSV+f8NZWM4WFtLG/fhuDRI/tPczpM5CetvMaVidh7fW1NjgtB9SkoiML5uSrM2FjqJunLF3Usnz9brzoU6TCRn7TyGlcmwkCkry9E/s7o6AjDmzchePUqbPgN6wR2HYbdyaRi9Tx/rpBxiJtYJ7DrutGqutpYlFPoJ5O19fRoeSsqFJifl+H0VIK9vQAMDITgwQPzlbuqSomvpDx5uU2kHyAv/5uJnGqF47VbU1mZqKmJ3nzgalxSYjRSa6uzvMJEv/GTiXiKcsTMRK9fWxtiY0OGrCwtb2WlAldXdF8Kz0308mUkIQGSmMSIm9rkb8XahWngxEQzM1pRPjgYgqIi+tWD+mIfykTfvmmvIjxKwR1wdraxoG9o0Ar6jx+d5xUmSgFMAycmwgNYjEX9bt2i+yDUZLK8DDRMbm6iGfQF/YcPmgZu8goTpQCmgRMTsdjeXutYajJZLLK4KMO9e8Y4hCroWZyTvJ7XRHQSI8JENHZi796NwdaWeh+UiVZXZcjJMcZZYScv4omJkm1b/xUTTU6m3kROtvgs1mxFyMuLwsqKqjFCmSjdK6BtE+kP0MzemVjt41kE9ltY8KeJvn5VY7H4vHOH7uMWO1qZHTZa1SZ4Ms/Gz/DKRGmpifRH+e/eBeHhQ61gw6SlpVGYmND6dHdb38jfMtHIiDZGHO+TJ/QuxA1WWuEJNn770++S6uu1XRK1O8NXU2NjBA4O1Pv++VOC/X1t0lksi3NiorTsznjOL378kKCw0DgIr85r3JgIt7mXl3T+RGGcw6PV+nrieU2yWDx5xj7UZLI+TkyUlnMixM5J6tmZZPpl3g8mQlpaIqSRvDIRYker7e0AuRJ2dtI6HR0F4pONfbw2EdLWluITa4b2TUe7ICbGpXZ0NAhlZeavB7+YCMFc09PB+MSw/F6aCDHTin3Dys8316qmRonXlRiL4D8X9K+YVJgIwVXu5pgpXJlIIDBCNgoEPJCNAgEPZKNAwAPZKBDwQDYKBDyQjQIBD2SjQGCXGPwChoTVDsCRZY8AAAAASUVORK5CYII=" />
                       </ui:WaitImageAppear.Image>
@@ -161,7 +162,7 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8605b6d6-87c9-4bef-8c8b-6e73cb0b79e6" InformativeScreenshot="bf9d300db3f8db1706f1d24df66dca89">
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[foundElt]" Id="8605b6d6-87c9-4bef-8c8b-6e73cb0b79e6" InformativeScreenshot="bf9d300db3f8db1706f1d24df66dca89">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

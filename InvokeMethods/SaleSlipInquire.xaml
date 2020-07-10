@@ -187,7 +187,7 @@
                       <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">["0"+today.Substring(4,1)]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[today.Substring(3,2)]</InArgument>
                     </Assign.Value>
                   </Assign>
                   <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Month" EmptyField="False" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="[month]">

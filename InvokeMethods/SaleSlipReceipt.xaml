@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>816,5060.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,5060.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SaleSlipInquire_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -161,16 +161,13 @@
                                     </ActivityFunc>
                                   </ui:GetOCRText.OCREngine>
                                   <ui:GetOCRText.Target>
-                                    <ui:Target Element="{x:Null}" Id="3c19e5d8-6c92-4c8e-8bda-5fe372459fe7" InformativeScreenshot="afc4a68db8fd495d919d5a6668699ecf" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
+                                    <ui:Target Element="{x:Null}" Id="3c19e5d8-6c92-4c8e-8bda-5fe372459fe7" InformativeScreenshot="49a377065ffb89c327134be0a720615e" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;" WaitForReady="COMPLETE">
                                       <ui:Target.ClippingRegion>
-                                        <ui:Region Rectangle="184, 110, 112, 27" />
+                                        <ui:Region Rectangle="200, 109, 103, 27" />
                                       </ui:Target.ClippingRegion>
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
                                     </ui:Target>
                                   </ui:GetOCRText.Target>
                                   <ui:GetOCRText.Text>

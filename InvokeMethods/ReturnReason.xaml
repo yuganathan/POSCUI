@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1068,2060.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,2060.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ReturnReason_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,6 +64,7 @@
   <Sequence DisplayName="ReturnReason" sap:VirtualizedContainerService.HintSize="805.6,1896" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ThermalReceipt" />
+      <Variable x:TypeArguments="ui:UiElement" Name="felement" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -111,12 +112,15 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,512" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Thermal Receipt on Return Slip screen" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                    <ui:WaitImageAppear DisplayName="Find Thermal Receipt on Return Slip screen" FoundElement="[felement]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
                       <ui:WaitImageAppear.Image>
                         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOkAAAAdCAYAAABPNEvsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATESURBVHhe7ZtLaxRBEMc7F8UHQnwHbx6SgFEQEV8Qojl4UDGHKAQCfgVfIB686dGTICr4iIKCN416UHMISgKafKY2xVBWzWztdO10b6Y1dfhBtrr+XT21/U/vY9a51VVvGEbGiEHDMPJBDBqGkQ9i0DCMfBCDhmHkgxis4lxvjI11amdmynNWAU03rRatdmDAu507vbt40bv5edJUtXfudI4hv38XesjjdavcukXzAc+eyXkA5oR6lRq+viraXmmRegU9OXXKu+3bKQ/q7tnj3ZUr3n3/3qnhc2pYr321a5d3ly559+kTaTRaCazbMZGENEEd0kXlZFLOjh3evX5NuqpWMio3KMDrcpaXvdu9uzzf8eNyLoA5OZmUE+qVhmqvbt4sNreUi+zf793Hj2WdlFdHG/vqzRvSxdQtTdINaYI6pIvK1aQA/Mf+8aO7lhu1alCA1+XwUxSvD3j+XM7H8VxNCoR6FYL3Ck7QkEGRkZGi9ynqSuN1NNXu2+fdz5/xdf9O0Ct79xYTTU7K4wgWjDFpk01bp4Un+9077w4fprzbt2kcYxwwqmRQgK8Z4acobDB4ybZlS/H4xInOfADna8ukMb1qsubTp0kPLxE/f6YxqPv2rXeHDlHOgwc0jrFUvUqxn6Ve1b1lAjR1xaCGf9mkyLdv3m3aVORNTFActUND9DeAawQ2b/ZucJDifF4ANjLmPnxYxK5do9iLF50aHEu18bRo6oZ61WTN+B50dLTY4FLO169U9/x5isfUlUi5n3mvzp6VcxAzqUJ78GCRd+wYxbj2xg16jIBBnzyR1wxUT1GMLyzQaXryZFkD4PxNrjcGbd1Qr3iuBtRevSqPI9evezc7693duxSLqSuRej9jr44elccRM2lAy//jXbhA8aqWGxUM+vhxEe9mUukURfhp+upVeQzjTa43Bk1dba96oS2tRMr9zHsVms9M2kWL7x2OHKG8R49oXNJK1yutudspivDTFN6T8TGIAU2uN4a6uk16paUtrUSK/Sz1ip/+ElmZVItk0hDVE6kXLQAfBkla/kRoTVp3iiL8NJ2bozjGUm08LVhXQ7dehah7jmJMGkKqK9GP/XzggHdLS/I8iJlUATQSTj9J28SkdacoAqfp1q1F3rlzFIfHQK4mretViI1mUvhQEU5VaQ6OmVTJmTPlTxcxzjfPy5fF93rv31NMMilqtUjaXE0KdOtViI1gUrzj6PJl7758kfVVsjJp6Imo2/AxT6KkhU0GZoNPKTHv3j0ar9Ny/jeT9rNXEm1pJVLvZy1m0oB2cZFedo6PU1xbdyOYFIntlQRq/8evYLSYSRVavKMF7hLBmFYbs+bU1xuDtm5MryT4zQwrK3LOv3gzQy+YSftcty1tatpaM78tcGqq/D4OXmZXbwu8f5/GMZaqV2ZSxUXVbQAtTTZPzMbrl1YL18aA8633mnu5wX542Ltfv9LUlcbrkLShXmkxk67RltHW+3pjwPnaWLPmp2rwa5IPH8o6Ka+OVGvGWKhXWsyka7RltDY2fFNwvrbW/PRp8aPvbdsoD4wL3zlPTxe32VU1fE4NqdaMsVCvtPTVpIZhrA9i0DCMfBCDhmHkgxg0DCMfxKBhGPkgBg3DyIRV/wcbjclm9r3qiAAAAABJRU5ErkJggg==" />
                       </ui:WaitImageAppear.Image>
@@ -152,7 +156,7 @@
                         </ActivityFunc>
                       </ui:GetOCRText.OCREngine>
                       <ui:GetOCRText.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7923636-f47d-4113-8c41-94defd28db10" InformativeScreenshot="759cb8caf1e06748c646139fca1a4429">
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[felement]" Id="c7923636-f47d-4113-8c41-94defd28db10" InformativeScreenshot="759cb8caf1e06748c646139fca1a4429">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -168,7 +172,7 @@
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[ThermalReceipt]" />
                   </Sequence>
                 </Sequence>
-                <If Condition="[ThermalReceipt.Contains(&quot;THERMAL RECEIPT&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[ThermalReceipt.Contains(&quot;THERMAL&quot;)]" sap:VirtualizedContainerService.HintSize="652,404.8" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="304,255.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>

@@ -55,7 +55,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="821.6,1484.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="821.6,1254.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="TestDataTable" />
       <Variable x:TypeArguments="x:String" Name="Type" />
@@ -78,13 +78,13 @@
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="POSDT">[TestDataTable]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[TestDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="780,1136" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[TestDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="780,905.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="730.4,987.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="730.4,756.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -98,23 +98,26 @@
                 <InArgument x:TypeArguments="x:String">[row.Item("Type").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Type]" sap:VirtualizedContainerService.HintSize="564.8,692" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Type]" sap:VirtualizedContainerService.HintSize="688.8,692" sap2010:WorkflowViewState.IdRef="Switch`1_2">
               <Switch.Default>
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Test case does not fall under Sale/Return/Exchange category" />
               </Switch.Default>
-              <Sequence x:Key="Sale" sap:VirtualizedContainerService.HintSize="648.8,560.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence x:Key="Sale" sap:VirtualizedContainerService.HintSize="648.8,458.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="607.2,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="TestCase-Sale.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="607.2,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="TestCase-Sale.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">[row]</InArgument>
-                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">[POSMenuCheck]</InOutArgument>
+                    <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">
+                      <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="row" />
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:Boolean" x:Key="POSMenuCheck">
+                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="POSMenuCheck" />
+                    </InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="607.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[POSMenuCheck.ToString]" />
                 <If Condition="[POSMenuCheck=True]" sap:VirtualizedContainerService.HintSize="607.2,237.6" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="TestCase-GetReceipt.xaml">
@@ -130,7 +133,7 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence x:Key="Return" sap:VirtualizedContainerService.HintSize="648.8,300.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence x:Key="Return" sap:VirtualizedContainerService.HintSize="648.8,330.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,15 +177,9 @@
                   <If.Then>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TestCase-Exchange workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TestCase-GetReceipt.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptId">
-                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SlipNumber" />
-                        </OutArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptDate">
-                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SlipDate" />
-                        </OutArgument>
-                        <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">
-                          <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="row" />
-                        </InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptId">[SlipNumber]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ReceiptDate">[SlipDate]</OutArgument>
+                        <InArgument x:TypeArguments="sd:DataRow" x:Key="TestDataRow">[row]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>

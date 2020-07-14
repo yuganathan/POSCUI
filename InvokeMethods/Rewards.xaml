@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,3280.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,2936.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NoRewards_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,7 +61,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NoRewards" sap:VirtualizedContainerService.HintSize="844,3116" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NoRewards" sap:VirtualizedContainerService.HintSize="844,2772" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="GiftReceipt" />
       <Variable x:TypeArguments="x:Boolean" Name="PreviousReturnCheck" />
@@ -74,29 +74,29 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="802.4,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="[ScenarioName]" Status="STARTED" TestCase="Check Customer Desire for Gift Receipt question" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="802.4,2898.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="802.4,2554.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window " sap:VirtualizedContainerService.HintSize="765.6,2667.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="efd8d41b7e73a09ca5de67ce7d914e79" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window " sap:VirtualizedContainerService.HintSize="765.6,2323.2" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="efd8d41b7e73a09ca5de67ce7d914e79" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.21 (sterling@reg1) - VNC Viewer' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="732,2520" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="732,2176" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="690.4,1982.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence sap:VirtualizedContainerService.HintSize="690.4,1638.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648.8,1787.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648.8,1443.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,37 +133,11 @@
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="ESPJRP Message Not dispayed" />
                       </If.Else>
                     </If>
-                    <ui:ImageFound DisplayName="Image Exists " Found="[PreviousReturnCheck]" sap:VirtualizedContainerService.HintSize="607.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
-                      <ui:ImageFound.Image>
-                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
-                      </ui:ImageFound.Image>
-                      <ui:ImageFound.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="473567bd-a1f0-4c08-9d3a-106bb98bf74a" Selector="&lt;wnd app='vncviewer.exe' cls='vwr::CDesktopWin' omit:title='10.89.160.22 (sterling@reg2) - VNC Viewer' /&gt;" TimeoutMS="[Timeout]">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:ImageFound.Target>
-                    </ui:ImageFound>
-                    <If Condition="[PreviousReturnCheck=True]" sap:VirtualizedContainerService.HintSize="607.2,284.8" sap2010:WorkflowViewState.IdRef="If_2">
-                      <If.Then>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" DelayBefore="2000" DelayMS="2000" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="%[k(enter)]">
-                          <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c769c0b1-e525-405c-b373-7887024c845f" InformativeScreenshot="0d8475d8c1b8124fa189deb57025a239" Selector="&lt;ctrl omit:name='10.89.160.21 (sterling@reg1) - VNC Viewer' role='client' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:TypeInto.Target>
-                        </ui:TypeInto>
-                      </If.Then>
-                      <If.Else>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Previous return Message Not dispayed" />
-                      </If.Else>
-                    </If>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="607.2,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="InvokeMethods\AdjustTotalsMsg.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="ScenarioName" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
                     <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey " sap:VirtualizedContainerService.HintSize="607.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="N" KeyModifiers="None">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6938629d-0e06-4feb-b268-e3f87c06ad21" InformativeScreenshot="0f593254c3881710ced8593249499d7c" Selector="&lt;ctrl omit:name='10.89.160.22 (sterling@reg2) - VNC Viewer' role='client' /&gt;">
